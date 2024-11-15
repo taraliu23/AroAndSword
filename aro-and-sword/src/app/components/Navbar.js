@@ -1,10 +1,11 @@
-// components/Navbar.js
+// app/components/Navbar.js
 import Link from 'next/link';
+import './Navbar.css';
 
 const Navbar = () => {
 	return (
-		<nav>
-			<ul>
+		<nav className="custom-navbar">
+			<ul className="nav-list">
 				<li><Link href="/">Home</Link></li>
 				<li><Link href="/what-is-aromanticism">What’s Aromanticism?</Link></li>
 				<li><Link href="/dos-and-donts">Dos and Don'ts</Link></li>
