@@ -1,0 +1,44 @@
+/* app/components/Glossary.css */
+
+.glossary-widget {
+	max-width: 800px;
+	margin: auto;
+	padding: 1rem;
+}
+
+.glossary-widget input {
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.glossary-card {
+	background-color: #ffffff;
+	padding: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	/* Adds a soft shadow */
+	transition: transform 0.3s ease;
+	/* Smooth transition for hover effect */
+}
+
+.glossary-card:hover {
+	transform: translateY(-5px);
+	/* Slightly raises the card on hover */
+	box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+	/* Increases shadow on hover */
+}
+
+.glossary-card strong {
+	color: #2c3e50;
+	font-size: 1.2rem;
+}
+
+.glossary-card p {
+	color: #333;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+}
