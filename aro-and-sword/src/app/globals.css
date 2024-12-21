@@ -2,58 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Root Variables */
 :root {
-  --background: #ffffffb8;
+  --background: #f0fff4b8;
+  /* Light green with slight transparency */
   --foreground: #171717;
+  /* Dark gray for text */
+  --header-footer-bg: rgba(144, 238, 144, 0.8);
+  /* Light green with transparency */
+  --primary-color: #38b2ac;
+  /* Teal for buttons and accents */
+  --secondary-color: #68d391;
+  /* Light green for hover states */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #edededc8;
+    --header-footer-bg: rgba(72, 187, 120, 0.8);
+    /* Darker green for dark mode */
+    --primary-color: #319795;
+    /* Slightly muted teal for dark mode */
+    --secondary-color: #48bb78;
+    /* Hover state for dark mode */
   }
 }
 
+/* Body Styling */
 body {
   color: var(--foreground);
   background: var(--background);
-  /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
-  /* background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%); */
-  /* background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%); */
-  /* background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%); */
-  /* background-image: linear-gradient(-225deg, #B7F8DB 0%, #50A7C2 100%); */
-  /* background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(2, 37, 78, 1) 0%, rgba(4, 56, 126, 1) 19.7%, rgba(85, 245, 221, 1) 100.2%); */
-  /* background-image: linear-gradient(120deg, rgba(90, 173, 173, 1) 16.4%, rgba(0, 0, 0, 1) 99.7%); */
   font-family: Helvetica, sans-serif;
   padding: 20px;
   line-height: 1.6;
-  /* Improved readability */
 }
 
 /* Navigation Styling */
+nav {
+  background: var(--header-footer-bg);
+  backdrop-filter: blur(8px);
+  /* Frosted glass effect */
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 nav a {
-  color: #ecf0f1;
+  color: var(--foreground);
   text-decoration: none;
   font-size: 1.1rem;
-  transition: color 0.3s ease;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-  color: #1abc9c;
+  color: var(--primary-color);
+  transform: translateY(-2px);
 }
 
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+/* Header Styling */
+header {
+  background: var(--header-footer-bg);
+  backdrop-filter: blur(8px);
+  /* Frosted effect */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+/* Footer Styling */
+footer,
+.custom-footer {
+  background: var(--header-footer-bg);
+  backdrop-filter: blur(8px);
+  /* Frosted effect */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  color: var(--foreground);
+  text-align: center;
 }
 
 /* Hero Section */
 .hero-section {
   @apply text-white text-center p-6 rounded-lg shadow-lg;
-  /* background: linear-gradient(135deg, #1abc9c, #2ecc71); */
-  /* Gradient background */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   margin-bottom: 2rem;
-  /* Spacing below hero */
 }
 
 .hero-section h1 {
@@ -72,7 +111,6 @@ nav ul {
 .hero-section .btn:hover {
   @apply bg-gray-200;
   transform: translateY(-3px);
-  /* Lift effect */
 }
 
 /* Card Styling */
@@ -80,13 +118,12 @@ nav ul {
   @apply bg-white rounded-lg shadow-lg p-4;
   margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.78);
-  /* White with 70% opacity */
+  /* Light, frosted effect */
   backdrop-filter: blur(10px);
-  /* Frosted glass effect */
-  border-radius: 12px;
-  /* Rounded corners */
+  /* Frosted glass */
+  border: none;
+  /* Removed border */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
 
 .card:hover {
@@ -104,8 +141,9 @@ nav ul {
   @apply text-gray-700 text-sm mb-4;
 }
 
+/* Buttons */
 .btn-outline-primary {
-  @apply border border-teal-500 text-teal-500 font-medium py-2 px-4 rounded-lg;
+  @apply border-2 border-teal-500 text-teal-500 font-medium py-2 px-4 rounded-lg;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
@@ -125,6 +163,7 @@ input {
   @apply border rounded-md p-2 w-full mb-4;
 }
 
+/* Images */
 .img-fluid {
   @apply w-full h-auto rounded-lg;
   max-height: 400px;
@@ -140,8 +179,4 @@ input {
 [data-aos].aos-animate {
   opacity: 1;
   transform: translateY(0);
-}
-
-nav {
-  display: block !important;
 }
