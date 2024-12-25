@@ -77,15 +77,89 @@ header {
 }
 
 /* Footer Styling */
-footer,
-.custom-footer {
-  background: var(--header-footer-bg);
-  backdrop-filter: blur(8px);
-  /* Frosted effect */
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  color: var(--foreground);
+footer {
+  /* background: var(--header-footer-bg); */
+  background: #f0fff4b8;
+  /* Use the same background color as the main content */
+  /* color: var(--foreground); */
+  /* Consistent text color */
   text-align: center;
+  padding: 2rem;
+  backdrop-filter: none;
+  /* Remove frosted glass effect */
+}
+
+/* Footer Cards Container */
+.footer-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* Wrap cards on smaller screens */
+  gap: 1.5rem;
+  /* Space between cards */
+  justify-content: center;
+  /* Center-align cards */
+  padding: 2rem 1rem;
+  background: var(--header-footer-bg);
+  /* Light green with transparency */
+  backdrop-filter: blur(8px);
+  /* Frosted glass effect */
+  border-radius: 12px;
+}
+
+/* Footer Card Styling */
+.footer-card {
+  background: rgba(255, 255, 255, 0.78);
+  /* Semi-transparent white */
+  backdrop-filter: blur(10px);
+  /* Frosted glass effect */
+  border: none;
+  /* Remove borders */
+  border-radius: 12px;
+  /* Rounded corners */
+  padding: 1.5rem;
+  flex: 1 1 calc(33.333% - 1.5rem);
+  /* Responsive grid for 3 cards per row */
+  max-width: 300px;
+  /* Limit the width of each card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth animations */
+}
+
+/* Footer Card Hover Effect */
+.footer-card:hover {
+  transform: translateY(-5px);
+  /* Slight lift on hover */
+}
+
+/* Footer Card Title */
+.footer-card h5 {
+  color: var(--primary-color);
+  /* Teal text for titles */
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer Card Text */
+.footer-card p {
+  color: var(--foreground);
+  /* Dark text for readability */
+  font-size: 1rem;
+}
+
+/* Footer Card Links */
+.footer-card a {
+  display: inline-block;
+  color: var(--primary-color);
+  /* Teal links */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-card a:hover {
+  color: var(--secondary-color);
+  /* Light green on hover */
 }
 
 /* Hero Section */
