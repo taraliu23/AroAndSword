@@ -167,6 +167,7 @@ footer {
   @apply text-white text-center p-6 rounded-lg shadow-lg;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .hero-section h1 {
@@ -253,4 +254,94 @@ input {
 [data-aos].aos-animate {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Custom Card Styling */
+.custom-card {
+  background: rgba(255, 255, 255, 0.95);
+  /* Slightly less transparent white */
+  backdrop-filter: blur(8px);
+  /* Frosted glass effect */
+  border-radius: 12px;
+  /* Smooth rounded corners */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* Light border for definition */
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* Spacing between cards */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth hover animations */
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  /* Lift effect on hover */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
+  border-color: rgba(0, 0, 0, 0.2);
+  /* Slightly darker border on hover */
+}
+
+.custom-card-body {
+  color: var(--foreground);
+  /* Ensure text is readable */
+}
+
+.custom-card-title {
+  color: var(--primary-color);
+  /* Teal title color */
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.custom-card-text {
+  color: #6b7280;
+  /* Cool gray text color */
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn-custom {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  /* Teal button background */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  /* Rounded corners */
+  transition: background 0.3s ease, transform 0.2s ease;
+  /* Smooth hover effects */
+}
+
+.btn-custom:hover {
+  background: var(--secondary-color);
+  /* Light green on hover */
+  transform: translateY(-2px);
+  /* Slight lift */
+}
+
+/* Hero Section Image Styling */
+.hero-image {
+  max-width: 60%;
+  /* Make the image responsive */
+  height: auto;
+  margin-bottom: 1rem;
+  /* Add spacing for smaller screens */
+}
+
+/* Hero Icon Styling */
+.hero-icon {
+  width: 50px;
+  /* Set the width of the heart icon */
+  height: 50px;
+  /* Set the height of the heart icon */
+  display: block;
+  /* Ensure it's a block element */
+  margin-bottom: 1rem;
+  /* Add spacing below the icon */
 }
