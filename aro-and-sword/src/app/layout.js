@@ -57,10 +57,12 @@ export default function RootLayout({ children }) {
         {isHomePage && <Hero />}
 
         {/* Main Content */}
-        <main className="flex-grow-1">
+        {/* <main className="flex-grow-1">
           {children}
-        </main>
-
+        </main> */}
+        <div className="flex-grow-1 main-content">
+          {children}
+        </div>
         {/* Persistent Footer */}
         <Footer />
       </body>

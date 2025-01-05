@@ -76,6 +76,7 @@ header {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   border-radius: 8px;
+
   margin-bottom: 2rem;
   z-index: 10;
 }
@@ -171,7 +172,7 @@ footer {
   @apply text-white text-center p-6 rounded-lg shadow-lg;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   margin-bottom: 2rem;
-  /* margin-top: 3rem; */
+  margin-top: 10rem;
   margin-top: 0;
   border-top: 1px solid gba(0, 0, 0, 0.1);
 }
@@ -350,4 +351,8 @@ input {
   /* Ensure it's a block element */
   margin-bottom: 1rem;
   /* Add spacing below the icon */
+}
+
+.main-content {
+  margin-top: 5rem;
 }
