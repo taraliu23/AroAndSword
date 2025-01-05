@@ -63,7 +63,7 @@ export default function HomePage() {
         </div>
         <div className="col-lg-6">
           <img
-            src="/images/dos-donts.jpg"
+            src="/images/dos-donts-9.png"
             alt="Community Guidelines"
             className="img-fluid rounded shadow-lg"
           />
