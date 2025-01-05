@@ -8,7 +8,7 @@
   /* Light green with slight transparency */
   --foreground: #171717;
   /* Dark gray for text */
-  --header-footer-bg: rgba(144, 238, 144, 0.8);
+  --header-footer-bg: #90ee90cc;
   /* Light green with transparency */
   --primary-color: #38b2ac;
   /* Teal for buttons and accents */
@@ -33,6 +33,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
+  /* background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); */
   font-family: Helvetica, sans-serif;
   padding: 20px;
   line-height: 1.6;
