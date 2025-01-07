@@ -22,12 +22,33 @@
     --background: #0a0a0a;
     --foreground: #edededc8;
     --header-footer-bg: rgba(72, 187, 120, 0.8);
-    /* Darker green for dark mode */
     --primary-color: #319795;
-    /* Slightly muted teal for dark mode */
     --secondary-color: #48bb78;
-    /* Hover state for dark mode */
   }
+}
+
+body {
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+  /* Higher than the navbar */
+  transition: background 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--secondary-color);
 }
 
 /* Body Styling */
@@ -169,12 +190,32 @@ footer {
 
 /* Hero Section */
 .hero-section {
-  @apply text-white text-center p-6 rounded-lg shadow-lg;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  margin-bottom: 2rem;
-  margin-top: 10rem;
-  margin-top: 0;
-  border-top: 1px solid gba(0, 0, 0, 0.1);
+  color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* New */
+  text-align: center;
+}
+
+.hero-section .btn-custom {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  /* Rounded buttons */
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-section .btn-custom:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-3px);
+  /* Subtle lift */
 }
 
 .hero-section h1 {
@@ -197,30 +238,32 @@ footer {
 
 /* Card Styling */
 .card {
-  @apply bg-white rounded-lg shadow-lg p-4;
-  margin-bottom: 2rem;
-  background: rgba(255, 255, 255, 0.78);
-  /* Light, frosted effect */
+  background: rgba(255, 255, 255, 0.95);
+  /* Increased opacity for readability */
   backdrop-filter: blur(10px);
-  /* Frosted glass */
-  border: none;
-  /* Removed border */
+  border-radius: 12px;
+  padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Added smooth transitions */
 }
 
 .card:hover {
   transform: translateY(-5px);
   /* Lift effect */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   /* Enhanced shadow */
 }
 
 .card-title {
-  @apply font-bold text-lg text-gray-900;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .card-text {
-  @apply text-gray-700 text-sm mb-4;
+  color: var(--foreground);
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Buttons */
@@ -246,11 +289,21 @@ input {
 }
 
 /* Images */
+
 .img-fluid {
-  @apply w-full h-auto rounded-lg;
-  max-height: 400px;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease;
+  /* Added smooth transition */
 }
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  /* Slight zoom effect */
+}
+
 
 /* Animations (Optional AOS Integration) */
 [data-aos] {
@@ -276,16 +329,16 @@ input {
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   /* Spacing between cards */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
   /* Subtle shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   /* Smooth hover animations */
 }
 
 .custom-card:hover {
   transform: translateY(-5px);
   /* Lift effect on hover */
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); */
   /* Enhanced shadow on hover */
   border-color: rgba(0, 0, 0, 0.2);
   /* Slightly darker border on hover */
@@ -355,4 +408,35 @@ input {
 
 .main-content {
   margin-top: 5rem;
+}
+
+.motion-animated {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.row {
+  margin-bottom: 3rem;
+  /* Reduce excessive gaps */
+}
+
+.section-divider {
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  margin: 2rem 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }

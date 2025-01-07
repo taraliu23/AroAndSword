@@ -1,15 +1,43 @@
 
+'use client'
+import { motion } from "motion/react";
+import { useState } from "react";
+
+
 export default function HomePage() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    document.body.classList.toggle("dark-mode", darkMode);
+  };
+
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div className="container mt-5">
+    <div className={`container mt-5 ${darkMode ? "dark-mode" : ""}`}>
+      {/* Theme Toggle Button */}
+      <button onClick={toggleTheme} className="theme-toggle-btn">
+        {darkMode ? "Light Mode" : "Dark Mode"}
+      </button>
+
       {/* Hero Section */}
-      <div className="row mb-5 align-items-center">
+      <motion.div
+        className="row mb-5 align-items-center"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
         <div className="col-lg-6">
-          {/* Small Heart Icon */}
           <img
             src="/images/hero-left2.png"
             alt="Heart Icon"
             className="hero-icon"
+            loading="lazy"
           />
           <h1 className="hero-title">Welcome to the Aromantic Community</h1>
           <p className="lead">
@@ -20,17 +48,26 @@ export default function HomePage() {
           </a>
         </div>
         <div className="col-lg-6">
-          {/* Original Image */}
-          <img
-            src="/images/hero-image-2.png"
+          <motion.img
+            src="/images/hero-image-3.png"
             alt="Aromantic Community"
             className="img-fluid rounded"
+            loading="lazy"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
           />
         </div>
-      </div>
+      </motion.div>
 
       {/* Information Sections */}
-      <section className="row mb-5 align-items-center">
+      <motion.section
+        className="row mb-5 align-items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeIn}
+      >
         <div className="col-lg-6">
           <h2 className="mb-4">What's Aromanticism?</h2>
           <p className="lead">
@@ -45,12 +82,19 @@ export default function HomePage() {
           <img
             src="/images/pic1.png"
             alt="Aromantic Community"
-            className="img-fluid rounded shadow-lg"
+            className="img-fluid rounded"
+            loading="lazy"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="row mb-5 align-items-center flex-row-reverse">
+      <motion.section
+        className="row mb-5 align-items-center flex-row-reverse"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeIn}
+      >
         <div className="col-lg-6">
           <h2 className="mb-4">Dos and Don'ts</h2>
           <p className="lead">
@@ -63,14 +107,21 @@ export default function HomePage() {
         </div>
         <div className="col-lg-6">
           <img
-            src="/images/dos-donts-9.png"
+            src="/images/dos-donts-8.png"
             alt="Community Guidelines"
-            className="img-fluid rounded shadow-lg"
+            className="img-fluid rounded"
+            loading="lazy"
           />
         </div>
-      </section>
+      </motion.section>
 
-      <section className="row mb-5 align-items-center">
+      <motion.section
+        className="row mb-5 align-items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeIn}
+      >
         <div className="col-lg-6">
           <h2 className="mb-4">Your Story Matters</h2>
           <p className="lead">
@@ -82,13 +133,17 @@ export default function HomePage() {
           </a>
         </div>
         <div className="col-lg-6">
-          <img
-            src="/images/community-stories.jpg"
+          <motion.img
+            src="/images/your-story-3.png"
             alt="Community Stories"
-            className="img-fluid rounded shadow-lg"
+            className="img-fluid rounded"
+            loading="lazy"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
           />
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

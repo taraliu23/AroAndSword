@@ -1,18 +1,18 @@
-import { motion } from 'framer-motion';
+
 
 export default function Hero() {
 	return (
 		<section className="relative bg-[url('/images/hero-image.jpg')] bg-cover bg-center h-[90vh]">
 			<div className="absolute inset-0 bg-gradient-to-r from-green-400 via-gray-100 to-gray-300 opacity-70"></div>
 			<div className="container mx-auto relative z-10 text-center text-white">
-				<motion.h1
+				<h1
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 1 }}
 					className="text-4xl md:text-6xl font-bold"
 				>
 					Welcome to the Aromantic Community
-				</motion.h1>
+				</h1>
 				<p className="mt-4 text-lg md:text-2xl">
 					Explore resources, share stories, and connect with others on the aromantic spectrum.
 				</p>
@@ -28,3 +28,4 @@ export default function Hero() {
 		</section>
 	);
 }
+
