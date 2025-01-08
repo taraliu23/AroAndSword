@@ -17,7 +17,7 @@
   /* Light green for hover states */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #edededc8;
@@ -25,7 +25,7 @@
     --primary-color: #319795;
     --secondary-color: #48bb78;
   }
-}
+} */
 
 body {
   transition: background 0.3s ease, color 0.3s ease;
@@ -59,6 +59,11 @@ body {
   font-family: Helvetica, sans-serif;
   padding: 20px;
   line-height: 1.6;
+}
+
+body.dark-mode {
+  color: var(--background);
+  background: var(--foreground);
 }
 
 /* Navigation Styling */
@@ -104,15 +109,10 @@ header {
 
 /* Footer Styling */
 footer {
-  /* background: var(--header-footer-bg); */
   background: #f0fff4b8;
-  /* Use the same background color as the main content */
-  /* color: var(--foreground); */
-  /* Consistent text color */
   text-align: center;
   padding: 2rem;
   backdrop-filter: none;
-  /* Remove frosted glass effect */
 }
 
 /* Footer Cards Container */

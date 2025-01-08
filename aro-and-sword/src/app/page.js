@@ -1,15 +1,34 @@
 
 'use client'
 import { motion } from "motion/react";
-import { useState } from "react";
-
+// import { useState } from "react";
+import countapi from "countapi-js";
+import React, { useState, useEffect } from "react";
 
 export default function HomePage() {
   const [darkMode, setDarkMode] = useState(false);
+  const [visitorCount, setVisitorCount] = useState(0);
+
+  useEffect(() => {
+    // Fetch the visitor count from CountAPI
+    countapi
+      .hit("aro-and-sword.vercel.app", "homepage-visitors") // Namespace and Key
+      .then((result) => {
+        setVisitorCount(result.value); // Set the count in state
+      })
+      .catch((error) => {
+        console.error("Error fetching visitor count:", error);
+      });
+  }, []);
+  // const toggleTheme = () => {
+  //   setDarkMode(!darkMode);
+  //   document.body.classList.toggle("dark-mode", darkMode);
+  // };
 
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle("dark-mode", darkMode);
+    const newDarkMode = !darkMode; // Get the new state first
+    setDarkMode(newDarkMode);
+    document.body.classList.toggle("dark-mode", newDarkMode); // Use the new state
   };
 
   // Animation variants
@@ -25,7 +44,46 @@ export default function HomePage() {
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
 
+
       {/* Hero Section */}
+      <motion.div
+        className="row mb-5 align-items-center"
+        initial="hidden"
+        animate="visible"
+        variants={fadeIn}
+      >
+        <div className="col-lg-6">
+          <img
+            src="/images/hero-left2.png"
+            alt="Heart Icon"
+            className="hero-icon"
+            loading="lazy"
+          />
+          <h1 className="hero-title">Welcome to the Aromantic Community</h1>
+          <p className="lead">
+            Explore resources, share stories, and connect with others on the aromantic spectrum.
+          </p>
+          <p className="visitor-count text-muted">
+            Visitor Count: <strong>{visitorCount}</strong>
+          </p>
+          <a href="/what-is-aromanticism" className="btn-custom">
+            Learn More
+          </a>
+        </div>
+        <div className="col-lg-6">
+          <motion.img
+            src="/images/hero-image-3.png"
+            alt="Aromantic Community"
+            className="img-fluid rounded"
+            loading="lazy"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          />
+        </div>
+      </motion.div>
+
+      {/* Hero Section
       <motion.div
         className="row mb-5 align-items-center"
         initial="hidden"
@@ -58,7 +116,7 @@ export default function HomePage() {
             transition={{ duration: 0.8 }}
           />
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* Information Sections */}
       <motion.section
