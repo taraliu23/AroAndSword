@@ -425,7 +425,7 @@ input {
 
 .row {
   margin-bottom: 3rem;
-  /* Reduce excessive gaps */
+
 }
 
 .section-divider {
@@ -435,8 +435,58 @@ input {
   margin: 2rem 0;
 }
 
-.grid-container {
+.bingo-container {
+  text-align: center;
+  margin: 30px auto;
+  max-width: 30%;
+}
+
+.bingo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.bingo-cell {
+  aspect-ratio: 1;
+  /* set fixed width and height */
+  width: 100px;
+  height: 100px;
+
+  border: 2px solid var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 5px;
+  background: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.bingo-cell:hover {
+  background: var(--secondary-color);
+  color: white;
+}
+
+.bingo-cell.marked {
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .bingo-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .bingo-cell {
+    aspect-ratio: 1;
+    /* Maintain square shape */
+    font-size: 0.8rem;
+    /* Slightly smaller font for smaller screens */
+  }
 }
