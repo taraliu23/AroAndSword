@@ -1,7 +1,7 @@
 // app/layout.js
 // import Navbar from './components/Header';
 // import Header from './components/Header';
-import Hero from './components/Hero';
+import Hero from './components/HeroSection';
 import Footer from './components/Footer';
 
 import './globals.css';
