@@ -8,24 +8,15 @@
   --background: #f0fff4b8;
   /* Light green with slight transparency */
   --foreground: #171717;
-  /* Dark gray for text */
   --header-footer-bg: #90ee90cc;
   /* Light green with transparency */
   --primary-color: #38b2ac;
   /* Teal for buttons and accents */
   --secondary-color: #68d391;
   /* Light green for hover states */
+  --text-color: #3a3a3a;
+  --text-background: #ffffffe5;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #edededc8;
-    --header-footer-bg: rgba(72, 187, 120, 0.8);
-    --primary-color: #319795;
-    --secondary-color: #48bb78;
-  }
-} */
 
 body {
   transition: background 0.3s ease, color 0.3s ease;
@@ -33,17 +24,18 @@ body {
 
 .theme-toggle-btn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 5vh;
+  left: 5vh;
+
+
   background: var(--primary-color);
-  color: white;
+  color: var(--text-background);
   border: none;
   padding: 10px 15px;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
   z-index: 999;
-  /* Higher than the navbar */
   transition: background 0.3s ease;
 }
 
@@ -55,7 +47,6 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  /* background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%); */
   font-family: Helvetica, sans-serif;
   padding: 20px;
   line-height: 1.6;
@@ -134,30 +125,25 @@ footer {
 
 /* Footer Card Styling */
 .footer-card {
-  background: rgba(255, 255, 255, 0.78);
-  /* Semi-transparent white */
+  background: var(--text-background);
+
   backdrop-filter: blur(10px);
-  /* Frosted glass effect */
   border: none;
-  /* Remove borders */
   border-radius: 12px;
-  /* Rounded corners */
   padding: 1.5rem;
   flex: 1 1 calc(33.333% - 1.5rem);
-  /* Responsive grid for 3 cards per row */
   max-width: 300px;
-  /* Limit the width of each card */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth animations */
+
 }
 
-/* Footer Card Hover Effect */
+
 .footer-card:hover {
   transform: translateY(-5px);
-  /* Slight lift on hover */
+
 }
 
-/* Footer Card Title */
+
 .footer-card h5 {
   color: var(--primary-color);
   /* Teal text for titles */
@@ -165,14 +151,13 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* Footer Card Text */
 .footer-card p {
   color: var(--foreground);
   /* Dark text for readability */
   font-size: 1rem;
 }
 
-/* Footer Card Links */
+
 .footer-card a {
   display: inline-block;
   color: var(--primary-color);
@@ -192,6 +177,7 @@ footer {
 .hero-section {
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
+  color: var(--background);
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -328,38 +314,33 @@ input {
   /* Light border for definition */
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  /* Spacing between cards */
-  /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); */
-  /* Subtle shadow */
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-  /* Smooth hover animations */
+
 }
 
 .custom-card:hover {
   transform: translateY(-5px);
   /* Lift effect on hover */
-  /* box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); */
-  /* Enhanced shadow on hover */
+
   border-color: rgba(0, 0, 0, 0.2);
   /* Slightly darker border on hover */
 }
 
 .custom-card-body {
   color: var(--foreground);
-  /* Ensure text is readable */
+
 }
 
 .custom-card-title {
   color: var(--primary-color);
-  /* Teal title color */
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .custom-card-text {
-  color: #6b7280;
-  /* Cool gray text color */
+
+  color: var(--text-background);
+
   font-size: 1rem;
   margin-bottom: 1rem;
 }
@@ -368,7 +349,6 @@ input {
   display: inline-block;
   padding: 0.5rem 1rem;
   background: var(--primary-color);
-  /* Teal button background */
   color: white;
   font-weight: bold;
   text-decoration: none;
@@ -380,7 +360,7 @@ input {
 
 .btn-custom:hover {
   background: var(--secondary-color);
-  /* Light green on hover */
+
   transform: translateY(-2px);
   /* Slight lift */
 }
@@ -397,17 +377,14 @@ input {
 /* Hero Icon Styling */
 .hero-icon {
   width: 50px;
-  /* Set the width of the heart icon */
   height: 50px;
-  /* Set the height of the heart icon */
   display: block;
-  /* Ensure it's a block element */
   margin-bottom: 1rem;
-  /* Add spacing below the icon */
+
 }
 
 .main-content {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 
 .motion-animated {
@@ -424,8 +401,7 @@ input {
 }
 
 .row {
-  margin-bottom: 3rem;
-
+  margin-bottom: 2rem;
 }
 
 .section-divider {
@@ -435,49 +411,6 @@ input {
   margin: 2rem 0;
 }
 
-.bingo-container {
-  text-align: center;
-  margin: 30px auto;
-  max-width: 30%;
-}
-
-.bingo-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 5px;
-  margin-top: 20px;
-}
-
-.bingo-cell {
-  aspect-ratio: 1;
-  /* set fixed width and height */
-  width: 100px;
-  height: 100px;
-
-  border: 2px solid var(--primary-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 5px;
-  background: white;
-  transition: background 0.3s ease, color 0.3s ease;
-}
-
-.bingo-cell:hover {
-  background: var(--secondary-color);
-  color: white;
-}
-
-.bingo-cell.marked {
-  background: var(--primary-color);
-  color: white;
-  font-weight: bold;
-}
-
-
 @media (max-width: 768px) {
   .bingo-grid {
     grid-template-columns: repeat(5, 1fr);
@@ -485,8 +418,77 @@ input {
 
   .bingo-cell {
     aspect-ratio: 1;
-    /* Maintain square shape */
     font-size: 0.8rem;
     /* Slightly smaller font for smaller screens */
+  }
+}
+
+.bingo-container {
+  width: 60vw;
+  /* 60% of the viewport width */
+  aspect-ratio: 1;
+  /* Ensures the grid is square */
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0;
+  border: 2px dotted var(--primary-color);
+}
+
+.bingo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.9rem;
+  border: 1px dotted var(--primary-color);
+  background: var(--background);
+  color: var(--text-background);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bingo-cell.marked {
+  /* background: var(--primary-color); */
+  background: #38b2ac71;
+  /* color: var(--text-background); */
+  color: var(--text-color);
+}
+
+.bingo-cell:hover {
+  background: #68d39196;
+  /* --primary-color: #38b2ac;
+      /* Teal for buttons and accents */
+  /* --secondary-color: #68d391; */
+  /* color: var(--text-background); */
+  /* color: var(--secondary-color); */
+  color: var(--text-color)
+}
+
+.bingo-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  background-color: var(--text-background);
+  padding: 20px;
+  border-radius: 10px;
+  /* border: 2px solid var(--primary-color); */
+  animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
   }
 }

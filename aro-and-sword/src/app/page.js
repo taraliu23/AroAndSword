@@ -30,7 +30,6 @@ export default function HomePage() {
         {darkMode ? "Light Mode" : "Dark Mode"}
       </button>
 
-
       {/* Hero Section */}
       <motion.div
         className="row mb-5 align-items-center"
@@ -39,18 +38,21 @@ export default function HomePage() {
         variants={fadeIn}
       >
         <div className="col-lg-6">
-          <img
-            src="/images/hero-left2.png"
+          <motion.img
+            src="/images/icon30.png"
             alt="Heart Icon"
             className="hero-icon"
             loading="lazy"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.4,
+              scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
           />
           <h1 className="hero-title">Welcome to the Aromantic Community</h1>
           <p className="lead">
             Explore resources, share stories, and connect with others on the aromantic spectrum.
-          </p>
-          <p className="visitor-count text-muted">
-            Visitor Count: <strong>{visitorCount}</strong>
           </p>
           <a href="/what-is-aromanticism" className="btn-custom">
             Learn More
@@ -58,7 +60,7 @@ export default function HomePage() {
         </div>
         <div className="col-lg-6">
           <motion.img
-            src="/images/hero-image-3.png"
+            src="/images/hero-image-4.png"
             alt="Aromantic Community"
             className="img-fluid rounded"
             loading="lazy"
@@ -68,7 +70,6 @@ export default function HomePage() {
           />
         </div>
       </motion.div>
-
 
       {/* Bingo Section */}
 
@@ -148,7 +149,7 @@ export default function HomePage() {
         </div>
         <div className="col-lg-6">
           <motion.img
-            src="/images/your-story-3.png"
+            src="/images/your-story-4.png"
             alt="Community Stories"
             className="img-fluid rounded"
             loading="lazy"
