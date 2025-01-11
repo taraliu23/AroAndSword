@@ -1,10 +1,12 @@
-
 'use client'
+import 'retro.css/css/index.min.css';
 import { motion } from "motion/react";
 // import { useState } from "react";
 import countapi from "countapi-js";
 import React, { useState, useEffect } from "react";
 import Bingo from "./components/Bingo";
+import { ThemeProvider } from "app/components/theme-provider"
+
 
 export default function HomePage() {
   const [darkMode, setDarkMode] = useState(false);
@@ -24,11 +26,19 @@ export default function HomePage() {
   };
 
   return (
-    <div className={`container mt-5 ${darkMode ? "dark-mode" : ""}`}>
+    <div className={`row center-x space-x-15 ${darkMode ? "dark-mode" : ""}`}>
       {/* Theme Toggle Button */}
-      <button onClick={toggleTheme} className="theme-toggle-btn">
+
+      {/* <button onClick={toggleTheme} className="button is-info" >
         {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+      </button> */}
+
+      {/* <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      > */}
 
       {/* Hero Section */}
       <motion.div
@@ -54,9 +64,10 @@ export default function HomePage() {
           <p className="lead">
             Explore resources, share stories, and connect with others on the aromantic spectrum.
           </p>
-          <a href="/what-is-aromanticism" className="btn-custom">
+          {/* <a href="/what-is-aromanticism" className="btn-custom">
             Learn More
-          </a>
+          </a> */}
+
         </div>
         <div className="col-lg-6">
           <motion.img
@@ -89,7 +100,7 @@ export default function HomePage() {
             Learn more about aromanticism and what it means to be on the aromantic spectrum.
             Understand the unique experiences and perspectives of aromantic individuals.
           </p>
-          <a href="/what-is-aromanticism" className="btn-custom">
+          <a href="/what-is-aromanticism" className="button is-success">
             Explore More
           </a>
         </div>
@@ -116,9 +127,10 @@ export default function HomePage() {
             Understand how to interact respectfully with the aromantic community.
             Learn about supportive communication and inclusive practices.
           </p>
-          <a href="/dos-and-donts" className="btn-custom">
+          <a href="/dos-and-donts" className="button is-success">
             Learn More
           </a>
+
         </div>
         <div className="col-lg-6">
           <img
@@ -143,7 +155,7 @@ export default function HomePage() {
             Share your experiences or read inspiring stories from others in the aromantic community.
             Every narrative contributes to understanding and visibility.
           </p>
-          <a href="/your-story" className="btn-custom">
+          <a href="/your-story" className="button is-success">
             Share Your Story
           </a>
         </div>
@@ -159,8 +171,7 @@ export default function HomePage() {
           />
         </div>
       </motion.section>
+      {/* </ThemeProvider> */}
     </div>
-
-
   );
 }

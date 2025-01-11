@@ -1,7 +1,7 @@
+@import 'retro.css/css/index.min.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* @import 'retro.css/css/index.min.css'; */
 
 /* Root Variables */
 :root {
@@ -64,7 +64,9 @@ nav {
   /* Frosted glass effect */
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* add round corners */
+  margin-bottom: 2rem;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 nav a {
@@ -85,15 +87,13 @@ nav ul {
   gap: 1.5rem;
 }
 
-/* Header Styling */
-header {
-  background: var(--header-footer-bg);
-  backdrop-filter: blur(8px);
+Header Styling header {
+  /* background: var(--header-footer-bg); */
+  backdrop-filter: blur(20px);
   /* Frosted effect */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   padding: 1rem 2rem;
-  border-radius: 8px;
-
+  /* border-radius: 8px; */
   margin-bottom: 2rem;
   z-index: 10;
 }
@@ -110,32 +110,17 @@ footer {
 .footer-cards-container {
   display: flex;
   flex-wrap: wrap;
-  /* Wrap cards on smaller screens */
   gap: 1.5rem;
-  /* Space between cards */
   justify-content: center;
-  /* Center-align cards */
   padding: 2rem 1rem;
   background: var(--header-footer-bg);
   /* Light green with transparency */
   backdrop-filter: blur(8px);
   /* Frosted glass effect */
-  border-radius: 12px;
+  /* border-radius: 12px; */
 }
 
 /* Footer Card Styling */
-.footer-card {
-  background: var(--text-background);
-
-  backdrop-filter: blur(10px);
-  border: none;
-  border-radius: 12px;
-  padding: 1.5rem;
-  flex: 1 1 calc(33.333% - 1.5rem);
-  max-width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-}
 
 
 .footer-card:hover {
@@ -153,7 +138,6 @@ footer {
 
 .footer-card p {
   color: var(--foreground);
-  /* Dark text for readability */
   font-size: 1rem;
 }
 
@@ -180,23 +164,11 @@ footer {
   color: var(--background);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
   /* New */
   text-align: center;
 }
 
-.hero-section .btn-custom {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: var(--primary-color);
-  border-radius: 30px;
-  /* Rounded buttons */
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
 
 .hero-section .btn-custom:hover {
   background-color: var(--secondary-color);
@@ -212,10 +184,6 @@ footer {
   @apply text-lg mb-4;
 }
 
-.hero-section .btn {
-  @apply bg-white text-foreground font-medium py-2 px-4 rounded-full;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
 
 .hero-section .btn:hover {
   @apply bg-gray-200;
@@ -229,14 +197,14 @@ footer {
   backdrop-filter: blur(10px);
   border-radius: 12px;
   padding: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
   /* Added smooth transitions */
 }
 
 .card:hover {
   transform: translateY(-5px);
   /* Lift effect */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
   /* Enhanced shadow */
 }
 
@@ -253,21 +221,8 @@ footer {
 }
 
 /* Buttons */
-.btn-outline-primary {
-  @apply border-2 border-teal-500 text-teal-500 font-medium py-2 px-4 rounded-lg;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
 
-.btn-outline-primary:hover {
-  @apply bg-teal-500 text-white;
-  transform: translateY(-3px);
-}
 
-/* Smooth Hover Effects */
-.btn,
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
 /* Forms */
 input {
@@ -338,40 +293,22 @@ input {
 }
 
 .custom-card-text {
-
   color: var(--text-background);
-
   font-size: 1rem;
   margin-bottom: 1rem;
 }
 
-.btn-custom {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: var(--primary-color);
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  /* Rounded corners */
-  transition: background 0.3s ease, transform 0.2s ease;
-  /* Smooth hover effects */
-}
 
 .btn-custom:hover {
   background: var(--secondary-color);
-
   transform: translateY(-2px);
-  /* Slight lift */
 }
 
 /* Hero Section Image Styling */
 .hero-image {
   max-width: 60%;
-  /* Make the image responsive */
   height: auto;
   margin-bottom: 1rem;
-  /* Add spacing for smaller screens */
 }
 
 /* Hero Icon Styling */
@@ -380,11 +317,10 @@ input {
   height: 50px;
   display: block;
   margin-bottom: 1rem;
-
 }
 
 .main-content {
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .motion-animated {
@@ -459,7 +395,6 @@ input {
 .bingo-cell:hover {
   background: #68d39196;
   /* --primary-color: #38b2ac;
-      /* Teal for buttons and accents */
   /* --secondary-color: #68d391; */
   /* color: var(--text-background); */
   /* color: var(--secondary-color); */
@@ -491,4 +426,13 @@ input {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
   }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: fit-content;
+  white-space: nowrap;
 }
