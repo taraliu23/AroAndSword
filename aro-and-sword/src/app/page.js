@@ -6,6 +6,8 @@ import InfoSection from "./components/InfoSection";
 import Bingo from "./components/Bingo";
 import WhatIsAromanticism from "./pages/what-is-aromanticism";
 import Resources from "./pages/resouces";
+import TypewriterHero from "./components/TypewriterHero";
+// import ThemeSwitcher from "./components/ThemeSwitcher";
 
 export default function HomePage() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -17,10 +19,11 @@ export default function HomePage() {
 
 	return (
 		<div className={`app ${darkMode ? "dark-mode" : ""}`}>
+
 			{/* Navbar */}
 			{/* <Navbar toggleTheme={toggleTheme} darkMode={darkMode} /> */}
-
 			<HeroSection />
+			<TypewriterHero />
 			<Bingo />
 			<WhatIsAromanticism />
 			<Resources />
