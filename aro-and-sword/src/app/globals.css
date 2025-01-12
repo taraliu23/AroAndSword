@@ -595,8 +595,10 @@ a:hover::after {
   color: var(--foreground);
   display: flex;
   align-items: center;
+
+  /* margin-bottom: 1rem; */
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  /* Same font for dynamic text */
+
 }
 
 .dynamic-text {

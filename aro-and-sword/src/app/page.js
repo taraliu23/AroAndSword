@@ -8,7 +8,7 @@ import WhatIsAromanticism from "./pages/what-is-aromanticism";
 import Resources from "./pages/resouces";
 import TypewriterHero from "./components/TypewriterHero";
 // import ThemeSwitcher from "./components/ThemeSwitcher";
-
+import SplitAttractionModel from "./pages/sam-model";
 export default function HomePage() {
 	const [darkMode, setDarkMode] = useState(false);
 
@@ -26,6 +26,7 @@ export default function HomePage() {
 			<TypewriterHero />
 			<Bingo />
 			<WhatIsAromanticism />
+			<SplitAttractionModel />
 			<Resources />
 		</div>
 	);
