@@ -103,63 +103,10 @@ export default function Bingo() {
 			</button>
 
 			{/* Bingo Animation */}
+			{/* {showBingo && <div className="bingo-animation">🎉 BINGO! 🎉</div>} */}
 			{showBingo && <div className="bingo-animation">🎉 BINGO! 🎉</div>}
 		</div>
 
-		// </div >
 	);
 }
 
-
-/* // <div className="center-x" style={{ textAlign: "center" }}>
-
-// 	<div className=" center-x">
-// 		<hr className="divider" />
-// 	</div>
-
-// 	{/* Title and Call-to-Action */
-/* // 	<h5 className="subtitle"> Aromantic Bingo 🎉</h5>
-	// 	<p className="bingo-subtitle">
-	// 		Click on the squares that resonate with you. Can you get a Bingo?
-	// 	</p>
-
-	// 	{/* Bingo Grid */
-// 	<Box */} */}
-// 		className="bingo-container"
-
-// 	>
-// 		{bingoItems.flat().map((item, index) => {
-// 			const rowIndex = Math.floor(index / 5);
-// 			const colIndex = index % 5;
-
-// 			return (
-// 				<Box
-// 					key={index}
-// 					className={`bingo-cell ${markedCells[rowIndex][colIndex] ? "marked" : ""
-// 						}`}
-// 					onClick={() => toggleCell(rowIndex, colIndex)}
-
-// 				>
-// 					{item}
-// 				</Box>
-// 			);
-// 		})}
-
-// 	</Box>
-
-
-// 	{/* Save as Picture Button */}
-// 	<div className="center">
-// 		<button className="button is-info" onClick={saveAsPicture}>
-// 			Save as Picture ✅
-// 		</button>
-// 	</div>
-
-
-// 	{/* Bingo Animation */}
-// 	{showBingo && <div className="bingo-animation">🎉 BINGO! 🎉</div>}
-
-
-// </div>
-// 	);
-// }
