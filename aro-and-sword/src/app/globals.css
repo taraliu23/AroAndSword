@@ -36,12 +36,17 @@
   --beige-2: #f2e9d0;
   --grey-pale: #e7e7e9;
   --ivory: #e8e8e8;
+  --headingTextColor: #1e1e1e;
 
 }
 
 body {
   /* font-family: "Fira Sans", sans-serif; */
   transition: background 0.3s ease, color 0.3s ease;
+  /* font-family: Helvetica Neue, Helvetica, sans-serif !important; */
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-color);
 }
 
 body.dark-mode {
@@ -91,57 +96,6 @@ header {
 /* .hero-content {
   background-color: var(--text-background);
 } */
-
-/* Footer Styling */
-footer {
-  background: #f0fff4b8;
-  text-align: center;
-  padding: 2rem;
-  backdrop-filter: none;
-}
-
-/* Footer Cards Container */
-.footer-cards-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-  padding: 2rem 1rem;
-  background: var(--secondary-color);
-  backdrop-filter: blur(8px);
-}
-
-/* Footer Card Styling */
-
-.footer-car:hover {
-  transform: translateY(-5px);
-
-}
-
-.footer-card h5 {
-  color: var(--primary-color);
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-card p {
-  color: var(--foreground);
-  font-size: 1rem;
-}
-
-.footer-card a {
-  display: inline-block;
-  color: var(--green-dark);
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 1rem;
-  transition: color 0.3s ease;
-}
-
-.footer-card a:hover {
-  color: var(--secondary-color);
-  /* Light green on hover */
-}
 
 /* Hero Section */
 
@@ -329,16 +283,20 @@ input {
 .title {
   margin-bottom: 30px;
   margin-left: 80px;
-  font-size: xx-large
+  font-size: xx-large;
+  font-weight: 300;
+  line-height: 100%;
+  /* letter-spacing: +.03em; */
+  /* font-family: Helvetica Neue, Helvetica, sans-serif !important; */
+  font-family: sohne-mono, monospace;
 }
 
 .sub-title {
+  font-family: 'Special Elite', 'Courier New', Courier, monospace !important;
   margin-bottom: 30px;
   margin-left: 80px;
   font-size: medium;
 }
-
-
 
 .app {
   display: flex;
@@ -617,4 +575,194 @@ a:hover::after {
   height: 1rem;
   background-color: var(--primary-color);
   z-index: -1;
+}
+
+/* Footer Logo */
+.footer-logo {
+  max-width: 120px;
+  /* Adjust size as needed */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* GitHub Icon */
+.github-link {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(100%);
+  /* Optional: Make it grayscale for a minimalist look */
+  transition: filter 0.3s ease, transform 0.3s ease;
+  /* Smooth hover effect */
+}
+
+.social-icon:hover {
+  filter: grayscale(0);
+  /* Remove grayscale on hover */
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+/* Footer Sections */
+.footer {
+  background-color: var(--ivory);
+  /* color: var(--foreground); */
+  padding: 2rem 1rem;
+  text-align: center;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    /* Side-by-side layout on larger screens */
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.footer-section {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+  /* Highlight color on hover *~/
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  /* color: rgba(0, 0, 0, 0.6); */
+  /* Subtle text */
+}
+
+/* Footer */
+.footer {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 2rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+  display: flex;
+  /* Use flexbox for horizontal alignment */
+  justify-content: space-around;
+  /* Distribute columns evenly with space */
+  align-items: flex-start;
+  /* Align content to the top */
+  flex-wrap: wrap;
+  /* Wrap content if it doesn't fit in one row */
+  text-align: center;
+}
+
+.footer-section {
+  flex: 1;
+  /* Allow equal space for each column */
+  min-width: 150px;
+  /* Ensure columns don't shrink too much */
+  margin: 0 1rem;
+  /* Add spacing between columns */
+}
+
+.footer-section h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: var(--foreground);
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-logo {
+  max-width: 100px;
+  /* Logo size */
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.github-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-link svg {
+  color: var(--primary-color);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.github-link:hover svg {
+  transform: scale(1.1);
+  color: var(--secondary-color);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
 }

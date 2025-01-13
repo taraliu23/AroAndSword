@@ -1,54 +1,116 @@
+// import GitHubIcon from '@mui/icons-material/GitHub';
+// export default function Footer() {
+// 	return (
+// 		<footer className="footer">
+// 			<div className="footer-container">
+// 				{/* Logo Section */}
+// 				<div className="footer-section">
+// 					<img
+// 						src="/images/logo.png"
+// 						alt="Aro-n-Sword Logo"
+// 						className="footer-logo"
+// 						width={100
+// 						}
+// 					/>
+// 				</div>
+
+// 				{/* Quick Links Section */}
+// 				<div className="footer-section">
+// 					<h4>Quick Links</h4>
+// 					<ul>
+// 						<li><a href="/">Home</a></li>
+// 						<li><a href="/what-is-aromanticism">What is Aromanticism?</a></li>
+// 						<li><a href="/split-attraction-model">Split Attraction Model</a></li>
+// 						<li><a href="/resources">Resources</a></li>
+// 					</ul>
+// 				</div>
+
+// 				{/* About Section */}
+// 				<div className="footer-section">
+// 					<h4>About</h4>
+// 					<p>
+// 						🏹 This is an open source community site to provide resources, stories, and support for people on the
+// 						aromantic spectrum 🌈
+
+// 					</p>
+// 				</div>
+
+// 				{/* GitHub Icon Section */}
+// 				<div className="footer-section">
+// 					<h4>GitHub</h4>
+// 					<a
+// 						href="https://github.com/taraliu23/AroAndSword"
+// 						target="_blank"
+// 						rel="noopener noreferrer"
+// 						className="github-link"
+// 					>
+// 						{/* <img
+// 							src="/images/github-icon.png" // Update this path to your GitHub icon
+// 							alt="GitHub"
+// 							className="social-icon"
+// 						/> */}
+// 						<GitHubIcon />
+// 					</a>
+// 				</div>
+// 			</div>
+// 			<div className="footer-bottom">
+// 				<p>© 2024-{new Date().getFullYear()} Aro-n-Sword. All rights reserved💚🤍🩶🖤.</p>
+// 			</div>
+// 		</footer>
+// 	);
+// }
+
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
 	return (
-		<footer className="custom-footer py-10">
-			<div className="row grid grid-cols-1 md:grid-cols-3 gap-6">
-				{/* Column 1 */}
-				<div>
-					<h4 className="font-bold text-lg text-green-600">About Us</h4>
-					<p className="mt-2 text-gray-700">
-						AroSpace is dedicated to creating a welcoming space for the aromantic community.
-					</p>
+		<footer className="footer">
+			<div className="footer-container">
+
+
+				<div className="footer-section">
+					<img
+						src="/images/logo.png"
+						alt="Aro-n-Sword Logo"
+						className="footer-logo"
+						width={100}
+					/>
 				</div>
-				{/* Column 2 */}
-				<div>
-					<h4 className="font-bold text-lg text-green-600">Quick Links</h4>
-					<ul className="mt-2 space-y-2">
-						<li>
-							<a href="/" className="text-gray-700 hover:text-green-600 transition">
-								Home
-							</a>
-						</li>
-						<li>
-							<a href="/about" className="text-gray-700 hover:text-green-600 transition">
-								About
-							</a>
-						</li>
-						<li>
-							<a href="/resources" className="text-gray-700 hover:text-green-600 transition">
-								Resources
-							</a>
-						</li>
+				{/* Quick Links Section */}
+				<div className="footer-section">
+					<h4>Quick Links</h4>
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/what-is-aromanticism">What is Aromanticism?</a></li>
+						<li><a href="/split-attraction-model">Split Attraction Model</a></li>
+						<li><a href="/resources">Resources</a></li>
 					</ul>
 				</div>
-				{/* Column 3 */}
-				<div>
-					<h4 className="font-bold text-lg text-green-600">Follow Us</h4>
-					<div className="mt-2 space-x-4">
-						<a href="https://facebook.com" className="text-gray-700 hover:text-green-600 transition">
-							Facebook
-						</a>
-						<a href="https://twitter.com" className="text-gray-700 hover:text-green-600 transition">
-							Twitter
-						</a>
-						<a href="https://instagram.com" className="text-gray-700 hover:text-green-600 transition">
-							Instagram
-						</a>
-					</div>
+
+				{/* About Section */}
+				<div className="footer-section">
+					<h4>About</h4>
+					<p>
+						🏹 This is an open-source community site providing resources, stories, and support
+						for people on the aromantic spectrum 🌈.
+					</p>
+				</div>
+
+				{/* Open to Collaboration Section */}
+				<div className="footer-section">
+					<h4>Open to Collaboration</h4>
+					<a
+						href="https://github.com/taraliu23/AroAndSword"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="github-link"
+					>
+						<GitHubIcon fontSize="large" />
+					</a>
 				</div>
 			</div>
-			<div className="text-center text-gray-500 mt-6">
-				© {new Date().getFullYear()} AroSpace. All rights reserved.
+			<div className="footer-bottom">
+				<p>© 2024-{new Date().getFullYear()} Aro-n-Sword. All rights reserved 💚🤍🩶🖤.</p>
 			</div>
 		</footer>
 	);
