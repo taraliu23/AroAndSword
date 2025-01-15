@@ -26,7 +26,7 @@ export default function HomePage() {
 			{/* <Navbar toggleTheme={toggleTheme} darkMode={darkMode} /> */}
 
 			<HeroSection />
-			<TypewriterHero />
+			{/* <TypewriterHero /> */}
 			<Bingo />
 			<WhatIsAromanticism />
 			<SplitAttractionModel />
