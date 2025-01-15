@@ -43,6 +43,24 @@ export default function Resources() {
 									The Ace and Aro Advocacy Project (TAAAP)
 								</a>
 							</li>
+							<li>
+								<a
+									href="https://www.facebook.com/groups/3897401743650465"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Asian Network of ACE Queer Activists Facebook Group
+								</a>
+							</li>
+							<li>
+								<a
+									href="https://carnivalofaros.wordpress.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									A Carnival of Aros
+								</a>
+							</li>
 						</ul>
 
 						<h6 className="subtitle small-head">📓 Books 📗</h6>

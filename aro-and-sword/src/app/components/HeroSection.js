@@ -23,6 +23,8 @@ export default function HeroSection() {
 						duration: 0.4,
 						scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
 					}}
+					style="transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 213.92, 0, 1);"
+
 				/>
 				<h1 className="title">🏹 Welcome to the Aromantic Community 💚</h1>
 				<img src="/images/cat-wink.gif" alt="Aromantic Community" width="80" />
@@ -42,3 +44,4 @@ export default function HeroSection() {
 		</motion.div>
 	);
 }
+

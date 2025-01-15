@@ -9,6 +9,8 @@ import Resources from "./pages/resouces";
 import TypewriterHero from "./components/TypewriterHero";
 // import ThemeSwitcher from "./components/ThemeSwitcher";
 import SplitAttractionModel from "./pages/sam-model";
+import Navbar from "./components/Navbar";
+
 export default function HomePage() {
 	const [darkMode, setDarkMode] = useState(false);
 
@@ -20,8 +22,9 @@ export default function HomePage() {
 	return (
 		<div className={`app ${darkMode ? "dark-mode" : ""}`}>
 
-			{/* Navbar */}
+			<Navbar />
 			{/* <Navbar toggleTheme={toggleTheme} darkMode={darkMode} /> */}
+
 			<HeroSection />
 			<TypewriterHero />
 			<Bingo />

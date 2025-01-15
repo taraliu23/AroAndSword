@@ -1,12 +1,24 @@
+'use client';
 
 import React from "react";
 
-export default function Navbar({ toggleTheme, darkMode }) {
+import Link from "next/link"; // Next.js navigation
+
+export default function Navbar() {
 	return (
-		<div className="row wrap space-10">
-			<button className="button is-success" onClick={toggleTheme}>
-				{darkMode ? "Light Mode" : "Dark Mode"}
-			</button>
-		</div>
+		<nav className="navbar">
+			<div className="navbar-container">
+				{/* Logo */}
+				<div className="logo">++ HelloAro</div>
+
+				{/* Navigation Links */}
+				<ul className="nav-links">
+					<li><a href="/">Home</a></li>
+					<li><Link href="/what-is-aromanticism">What is Aromanticism?</Link></li>
+					<li><a href="/split-attraction-model">Split Attraction Model</a></li>
+					<li><a href="/resources">Resources</a></li>
+				</ul>
+			</div>
+		</nav>
 	);
 }
