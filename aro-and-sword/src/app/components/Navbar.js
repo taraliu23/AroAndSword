@@ -9,6 +9,7 @@ const Navbar = () => {
 				{/* Replace "MyLogo" with a logo image and link it to the home page */}
 				<a href="/">
 					<img src="/images/logo.png" alt="My Logo" className="logo-image" />
+					<span className="logo-text">Aro & Sword</span>
 				</a>
 			</div>
 			<ul className="navbar-links">
