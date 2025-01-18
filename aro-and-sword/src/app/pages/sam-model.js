@@ -4,10 +4,10 @@ import React from "react";
 export default function SplitAttractionModel() {
 	return (
 		<div className="section-2 ">
-			<h1 className="title">Split Attraction Model</h1>
+			<h1 className="info-title">Split Attraction Model</h1>
 			<div className="content-section reverse-layout">
 				<div className="text-container">
-					<h2 className="subtitle">What is the Split Attraction Model?</h2>
+					{/* <h2 className="subtitle">What is the Split Attraction Model?</h2> */}
 					<p>
 						The Split Attraction Model (SAM) is a way of understanding that attraction can be divided into
 						different types, such as romantic, sexual, aesthetic, sensual, and platonic attraction.

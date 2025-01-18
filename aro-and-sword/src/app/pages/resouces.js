@@ -5,11 +5,11 @@ import React from "react";
 export default function Resources() {
 	return (
 		<div className="section-2">
-			<h1 className="title">Resources & Friendly Links</h1>
+			<h1 className="info-title">Resources & Friendly Links</h1>
 			<div className="content-section reverse-layout">
 				{/* Text Container */}
 				<div className="text-container">
-					<h2 className="subtitle">Explore More</h2>
+					{/* <h2 className="subtitle">Explore More</h2> */}
 					<p>
 						Here are some resources and friendly links to help you learn more about aromanticism and related topics.
 					</p>

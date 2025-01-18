@@ -12,7 +12,7 @@ export default function WhatIsAromanticism() {
 			transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
 			className="animated-section"   >
 			<div className="section-2">
-				<h1 className="title">What is Aromanticism?</h1>
+				<h1 className="info-title">What is Aromanticism?</h1>
 				<div className="content-section">
 					<div className="image-container">
 						<img
@@ -23,9 +23,8 @@ export default function WhatIsAromanticism() {
 					</div>
 					<div className="text-container">
 						{/* <h2 className="info-title">Understanding Aromanticism</h2> */}
-						<h6 className="subtitle">In the initialism LGBTQIA+, the A stands for aromanticism, alongside asexuality and agender.</h6>
-						<p>
-
+						<h6 className="sub-title">In the initialism LGBTQIA+, the A stands for aromanticism, alongside asexuality and agender.</h6>
+						<p className="info-text">
 							Aromanticism is a romantic orientation characterized by little to no romantic feelings towards to others, and experiencing little or no romantic desire or attraction.
 							The opposite of aromanticism is alloromanticism, defined as a romantic orientation in which one experiences romantic love or romantic attraction to others
 							Some aromantic individuals may experience romantic attraction but not feel compelled to act on it.

@@ -24,7 +24,7 @@ export default function HeroSection() {
 					<TypewriterHero />
 				</div>
 				{/* <div className="hero-background-text">Aromantic Community</div> */}
-
+				<div className="decorative-line"></div>
 				<h1 className="hero-title">
 					Welcome to the <span className="highlight">playground</span> of
 				</h1>
@@ -54,12 +54,11 @@ export default function HeroSection() {
 						Learn More
 					</motion.a>
 				</div>
-				<a href="/bingo" className="cta-primary">
+				{/* <a href="/bingo" className="cta-primary">
 					Play Aromantic Bingo
-				</a>
+				</a> */}
 
-
-				<div className="decorative-line"></div>
+				{/* <div className="decorative-line"></div> */}
 				<div className="decorative-circle"></div>
 			</motion.div>
 		</div>
