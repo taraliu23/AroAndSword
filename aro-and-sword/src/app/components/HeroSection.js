@@ -36,7 +36,7 @@ export default function HeroSection() {
 					Explore stories, share connections, and discover resources on the aromantic spectrum.
 				</p>
 
-				<div className="cta-buttons">
+				{/* <div className="cta-buttons">
 					<motion.a
 						href="/resources"
 						className="cta-primary"
@@ -53,7 +53,7 @@ export default function HeroSection() {
 					>
 						Learn More
 					</motion.a>
-				</div>
+				</div> */}
 				{/* <a href="/bingo" className="cta-primary">
 					Play Aromantic Bingo
 				</a> */}
