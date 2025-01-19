@@ -27,7 +27,7 @@ export default function HomePage() {
 
 			<HeroSection />
 			{/* <TypewriterHero /> */}
-			{/* <Bingo /> */}
+			<Bingo />
 			<WhatIsAromanticism />
 			<SplitAttractionModel />
 			<Resources />

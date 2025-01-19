@@ -21,12 +21,12 @@ const bingoLists = {
 		["While looking for a canonically aro-allo character, you have stared into the void", "Usually when listening to romantic love songs, no one in particular comes to your mind", "You didn't understand why people who get friendzoned can't stay friends / What's there to 'get over' first?", "'You didn't realize 'romantic attraction' is an actual feeling that's different from 'strong platonic love''", "You thought romantic relationships just meant being best friends + physical and emotional intimacy (~basically a QPR)"],
 		["You tried dating someone because you felt 'meh' about it, but went 'NOPE' when it felt like they thought your 'not having feelings' was not 'loving them enough'", "'You 'decided' to have a crush on someone, or randomly chose someone when asked who you liked'", "Designated relationships don't feel very different to friendships (your best tips: 'Communicate!' and 'Break up!')", "You can't comprehend all the stupid, and sometimes downright evil, things people do in the name of love", "You don't like the concept of 'friends dropping to less importance and value the moment you find romantic love'"]
 	],
-	"Aro-Allo Experiences Bingo": [
-		// Add the items here as in the previous examples
-	],
-	"Aro Bingo": [
-		// Add the items here as in the previous examples
-	],
+	// "Aro-Allo Experiences Bingo": [
+	// 	// Add the items here as in the previous examples
+	// ],
+	// "Aro Bingo": [
+	// 	// Add the items here as in the previous examples
+	// ],
 };
 
 export default function Bingo() {
@@ -73,14 +73,47 @@ export default function Bingo() {
 		checkBingo(); // Check for Bingo on every update
 	}, [markedCells]);
 
-	// Save Bingo as a Picture
+
 	const saveAsPicture = () => {
 		const bingoGrid = document.querySelector(".bingo-container");
-		html2canvas(bingoGrid).then((canvas) => {
+
+		// Create a container for the title and watermark
+		const wrapper = document.createElement("div");
+		wrapper.className = "watermark-container";
+		document.body.appendChild(wrapper);
+
+		// Clone the Bingo grid and append it to the wrapper
+		const clonedBingoGrid = bingoGrid.cloneNode(true);
+		wrapper.appendChild(clonedBingoGrid);
+
+		// Add the title
+		const title = document.createElement("div");
+		title.className = "watermark-title";
+		title.textContent = currentBingo;
+		wrapper.insertBefore(title, clonedBingoGrid);
+
+		// Add the logo
+		const logo = document.createElement("img");
+		logo.className = "watermark-logo";
+		logo.src = "/images/logo.png";
+
+
+		const watermarkText = document.createElement("div");
+		watermarkText.textContent = "https://aro-and-sword.vercel.app/";
+		watermarkText.className = "watermark-text";
+		wrapper.appendChild(watermarkText);
+
+
+		wrapper.insertBefore(logo, watermarkText);
+
+		html2canvas(wrapper, { scale: 2 }).then((canvas) => {
 			const link = document.createElement("a");
-			link.download = "bingo-result.png";
-			link.href = canvas.toDataURL("image/png");
+			link.download = `${currentBingo.toLowerCase().replace(/\s+/g, "-")}-bingo.png`;
+			link.href = canvas.toDataURL("image/png", 1.0);
 			link.click();
+
+			// Clean up the DOM after saving
+			document.body.removeChild(wrapper);
 		});
 	};
 
@@ -126,11 +159,32 @@ export default function Bingo() {
 				})}
 			</Box>
 
+
 			{/* Save as Picture Button */}
 			<button className="button is-info save-button" onClick={saveAsPicture}>
 				Save as Picture ✅
 			</button>
 
+			<div className="reference-text">
+				<p > Bingo Content Reference </p>
+				<p>
+					<a
+						href="https://www.reddit.com/r/aromantic/comments/1cb0rsj/made_aro_bingo_while_slacking_off_at_work/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						1. Aromantic Bingo: Reddit r/aromantic
+					</a></p>
+				<p>
+					<a
+						href="https://www.reddit.com/r/aromanticasexual/comments/1exs7ts/aromatic_bingo_card/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						2. Aromantic Experiences Bingo: Reddit r/aromanticasexual
+					</a>
+				</p>
+			</div>
 			{/* Bingo Animation */}
 			{showBingo && <div className="bingo-animation">🎉 <img className="bingo-cat" src='images/bingo.png'></img></div>}
 		</div>

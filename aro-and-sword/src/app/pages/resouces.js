@@ -19,10 +19,10 @@ export default function Resources() {
 
 					{/* Grouped Resources */}
 					<div className="resources-list">
-						<h6 className="subtitle small-head">📻 Podcast 🎵</h6>
+						<h6 className="sub-title-inline">📻 Podcast 🎵</h6>
 						<ul>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.soundsfakepod.com/resource"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -32,10 +32,10 @@ export default function Resources() {
 							</li>
 						</ul>
 
-						<h6 className="subtitle small-head">📂 Organization 🗄️</h6>
+						<h6 className="sub-title-inline">📂 Organization 🗄️</h6>
 						<ul>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://taaap.org/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -44,7 +44,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.facebook.com/groups/3897401743650465"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -53,7 +53,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://carnivalofaros.wordpress.com/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -63,10 +63,10 @@ export default function Resources() {
 							</li>
 						</ul>
 
-						<h6 className="subtitle small-head">📓 Books 📗</h6>
+						<h6 className="sub-title-inline small-head">📓 Books 📗</h6>
 						<ul>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.goodreads.com/book/show/128076214-hopeless-aromantic"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -75,7 +75,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.goodreads.com/book/show/121245340-amazing-ace-awesome-aro"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -84,7 +84,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://acedadadvice.com/the-ace-and-aro-relationship-guide"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -94,10 +94,10 @@ export default function Resources() {
 							</li>
 						</ul>
 
-						<h6 className="subtitle small-head">👭 Forums 👭</h6>
+						<h6 className="sub-title-inline">👭 Forums 👭</h6>
 						<ul>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.arocalypse.com/forums/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -106,7 +106,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.aromanticism.org/"
 									target="_blank"
 									rel="noopener noreferrer"
@@ -115,7 +115,7 @@ export default function Resources() {
 								</a>
 							</li>
 							<li>
-								<a
+								<a className="link-inline"
 									href="https://www.reddit.com/r/aromantic/"
 									target="_blank"
 									rel="noopener noreferrer"
