@@ -10,6 +10,8 @@ import TypewriterHero from "./components/TypewriterHero";
 // import ThemeSwitcher from "./components/ThemeSwitcher";
 import SplitAttractionModel from "./pages/sam-model";
 import Navbar from "./components/Navbar";
+import PostItCard from "./components/PostItCard";
+import LGBTQIAExplanation from "./components/LGBTQIAExplanation";
 
 export default function HomePage() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -27,10 +29,13 @@ export default function HomePage() {
 
 			<HeroSection />
 			{/* <TypewriterHero /> */}
+			<LGBTQIAExplanation />
 			<Bingo />
 			<WhatIsAromanticism />
 			<SplitAttractionModel />
 			<Resources />
+			<PostItCard />
+
 		</div>
 	);
 }

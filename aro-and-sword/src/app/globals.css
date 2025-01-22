@@ -1078,3 +1078,118 @@ body.dark-mode .navbar-links a:hover {
 
   color: var(--secondary-color) !important;
 }
+
+/* Wrapper for the Post-It */
+.post-it-wrapper {
+  /* position: fixed;
+   */
+  position: fixed;
+  top: 83%;
+  /* 3/4 down the screen */
+  right: 2%;
+  /* Position near the 3/4 right corner */
+  width: 90px;
+  /* Define initial size */
+  /* height: 80px; */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  /* Smooth transition for resizing and position */
+  z-index: 100;
+  overflow: hidden;
+  /* Hide the rest of the image */
+  /* clip-path: polygon(0 0, 50% 0, 0 50%); */
+  /* clip-path: polygon(100% 0,
+      100% 100%,
+      0 100%); */
+  filter: blur(5px);
+  /* Add some transparency */
+  opacity: 0.6;
+}
+
+/* On hover: Reveal more of the image */
+.post-it-wrapper:hover {
+  width: 200px;
+  height: 200px;
+  /* clip-path: polygon(100% 0, 100% 100%, 0 100%); */
+  filter: blur(2px);
+  opacity: 1;
+}
+
+/* On click: Center the post-it and show the whole image */
+.post-it-wrapper.revealed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: auto;
+  clip-path: none;
+  z-index: 2000;
+  filter: blur(0);
+  opacity: 1;
+}
+
+.post-it-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.lgbtqia-wrapper {
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.letters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 letters per row */
+  gap: 3rem;
+  justify-items: center;
+}
+
+.letter-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.letter-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 80;
+}
+
+.letter-container:hover .letter-image {
+  transform: scale(1.2);
+  opacity: 0.8;
+  z-index: 90;
+}
+
+.hover-info {
+  position: absolute;
+  top: 110%;
+  /* Position below the image */
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  background-color: var(--text-background);
+  /* Dark semi-transparent background */
+  /* color: #fff; */
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.letter-name {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
