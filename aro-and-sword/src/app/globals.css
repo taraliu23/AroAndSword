@@ -685,36 +685,47 @@ a:hover::after {
 
 
 /* Navigation Bar */
-.navbar {
+.navbar-container {
   top: 0;
   position: sticky;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(10px);
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  backdrop-filter: blur(8px);
   z-index: 1000;
+  /* margin-left: 4rem;
+  margin-right: 4rem; */
+  border-radius: 8px;
+  box-shadow: var(--foreground);
+  width: 100%;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   /* font-weight: bold; */
   color: var(--text-dark);
-  text-decoration: none;
+  text-decoration: none !important;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  margin-left: 2rem;
+
 }
 
 .navbar-logo a {
   align-items: center;
-  text-decoration: none;
+  text-decoration: none !important;
   justify-content: center;
-  margin-left: 0.3rem;
   flex-shrink: 0;
+  /* margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 0rem; */
 }
 
 .logo-image {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  /* padding-left: 1rem; */
+  /* margin: 2rem; */
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .navbar-links {
@@ -733,7 +744,6 @@ a:hover::after {
   transition: color 0.3s ease;
   /* font-family: 'Special Elite', 'Courier New', Courier, monospace; */
   font-family: 'Courier Bold', Courier, monospace;
-
 }
 
 .navbar-links a:hover {
@@ -1118,7 +1128,7 @@ body.dark-mode .navbar-links a:hover {
 
 .post-it-image {
   display: block;
-  width: 100%;
+  width: 60%;
   height: auto;
 }
 
@@ -1131,7 +1141,6 @@ body.dark-mode .navbar-links a:hover {
 .letters-grid {
   margin: 4rem;
   margin-top: 6rem;
-
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   /* 4 letters per row */
@@ -1255,6 +1264,7 @@ body.dark-mode .navbar-links a:hover {
   font-size: 0.95rem;
   margin: 0.5rem 0;
   color: var(--text-color);
+  font-family: Helvetica, sans-serif;
 }
 
 /* Fade-in Animation */
@@ -1268,4 +1278,9 @@ body.dark-mode .navbar-links a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.bingo-page {
+
+  padding: 16px;
 }

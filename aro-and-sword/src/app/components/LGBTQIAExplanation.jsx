@@ -65,7 +65,7 @@ const LGBTQIAExplanation = () => {
 		{ id: "T", name: "Transgender", description: "Transgender people have a gender identity that differs from the sex they were assigned at birth.", wiki: "https://en.wikipedia.org/wiki/Transgender", img: "/images/T.png" },
 		{ id: "Q", name: "Queer", description: "Queer is an umbrella term for people who don’t identify as straight or cisgender.", wiki: "https://en.wikipedia.org/wiki/Queer", img: "/images/Q.png" },
 		{ id: "I", name: "Intersex", description: "Intersex people are born with physical traits that don’t fit typical definitions of male or female bodies.", wiki: "https://en.wikipedia.org/wiki/Intersex", img: "/images/I.png" },
-		{ id: "A", name: "Asexual", description: "Asexual people experience little or no sexual attraction.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/A.png" },
+		{ id: "A", name: "Aromantic/Asexual/Agender", description: "Asexual people experience little or no sexual attraction.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/A.png" },
 		{ id: "+", name: "Plus", description: "The '+' represents other identities not included in LGBTQIA.", wiki: "https://en.wikipedia.org/wiki/LGBT", img: "/images/plus.png" },
 	];
 

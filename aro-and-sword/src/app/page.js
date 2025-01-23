@@ -5,7 +5,7 @@ import HeroSection from "./components/HeroSection";
 import InfoSection from "./components/InfoSection";
 import Bingo from "./components/Bingo";
 import WhatIsAromanticism from "./pages/what-is-aromanticism";
-import Resources from "./pages/resouces";
+import Resources from "./components/Resources";
 import TypewriterHero from "./components/TypewriterHero";
 // import ThemeSwitcher from "./components/ThemeSwitcher";
 import SplitAttractionModel from "./pages/sam-model";
