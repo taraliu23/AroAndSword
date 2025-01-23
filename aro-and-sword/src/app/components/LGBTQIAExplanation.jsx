@@ -59,13 +59,13 @@ const LGBTQIAExplanation = () => {
 	});
 
 	const letters = [
-		{ id: "L", name: "Lesbian", description: "A lesbian is a woman who is attracted to other women.", wiki: "https://en.wikipedia.org/wiki/Lesbian", img: "/images/l.png" },
-		{ id: "G", name: "Gay", description: "Gay refers to a man who is attracted to other men.", wiki: "https://en.wikipedia.org/wiki/Gay", img: "/images/g.png" },
-		{ id: "B", name: "Bisexual", description: "Bisexual people are attracted to more than one gender.", wiki: "https://en.wikipedia.org/wiki/Bisexuality", img: "/images/b.png" },
-		{ id: "T", name: "Transgender", description: "Transgender people have a gender identity that differs from the sex they were assigned at birth.", wiki: "https://en.wikipedia.org/wiki/Transgender", img: "/images/t.png" },
-		{ id: "Q", name: "Queer", description: "Queer is an umbrella term for people who don’t identify as straight or cisgender.", wiki: "https://en.wikipedia.org/wiki/Queer", img: "/images/q.png" },
-		{ id: "I", name: "Intersex", description: "Intersex people are born with physical traits that don’t fit typical definitions of male or female bodies.", wiki: "https://en.wikipedia.org/wiki/Intersex", img: "/images/i.png" },
-		{ id: "A", name: "Asexual", description: "Asexual people experience little or no sexual attraction.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/a.png" },
+		{ id: "L", name: "Lesbian", description: "A lesbian is a woman who is attracted to other women.", wiki: "https://en.wikipedia.org/wiki/Lesbian", img: "/images/L.png" },
+		{ id: "G", name: "Gay", description: "Gay refers to a man who is attracted to other men.", wiki: "https://en.wikipedia.org/wiki/Gay", img: "/images/G.png" },
+		{ id: "B", name: "Bisexual", description: "Bisexual people are attracted to more than one gender.", wiki: "https://en.wikipedia.org/wiki/Bisexuality", img: "/images/B.png" },
+		{ id: "T", name: "Transgender", description: "Transgender people have a gender identity that differs from the sex they were assigned at birth.", wiki: "https://en.wikipedia.org/wiki/Transgender", img: "/images/T.png" },
+		{ id: "Q", name: "Queer", description: "Queer is an umbrella term for people who don’t identify as straight or cisgender.", wiki: "https://en.wikipedia.org/wiki/Queer", img: "/images/Q.png" },
+		{ id: "I", name: "Intersex", description: "Intersex people are born with physical traits that don’t fit typical definitions of male or female bodies.", wiki: "https://en.wikipedia.org/wiki/Intersex", img: "/images/I.png" },
+		{ id: "A", name: "Asexual", description: "Asexual people experience little or no sexual attraction.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/A.png" },
 		{ id: "+", name: "Plus", description: "The '+' represents other identities not included in LGBTQIA.", wiki: "https://en.wikipedia.org/wiki/LGBT", img: "/images/plus.png" },
 	];
 
