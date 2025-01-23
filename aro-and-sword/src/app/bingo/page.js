@@ -7,7 +7,7 @@ import Footer from '../components/Footer'; // Optional Footer for consistency
 
 export default function BingoPage() {
 	return (
-		<div>
+		<div className="app">
 			<Navbar /> {/* Add a Navbar for navigation */}
 			<main className="bingo-page">
 				{/* <h1 className="page-title">Aromantic Bingo</h1>

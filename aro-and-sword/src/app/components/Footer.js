@@ -5,7 +5,6 @@ export default function Footer() {
 	return (
 		<footer className="footer">
 			<div className="footer-container">
-
 				<div className="footer-section">
 					<img
 						src="/images/logo.png"
@@ -15,18 +14,16 @@ export default function Footer() {
 					/>
 				</div>
 
-				{/* Quick Links Section */}
 				<div className="footer-section">
 					<h4>Quick Links</h4>
 					<ul>
 						<li><a href="/">Home</a></li>
-						<li><a href="/what-is-aromanticism">What is Aromanticism?</a></li>
-						<li><a href="/split-attraction-model">Split Attraction Model</a></li>
+						<li><a href="/bingo">Bingo</a></li>
+						{/* <li><a href="/split-attraction-model">Split Attraction Model</a></li> */}
 						<li><a href="/resources">Resources</a></li>
 					</ul>
 				</div>
 
-				{/* About Section */}
 				<div className="footer-section">
 					<h4>About</h4>
 					<p>
@@ -35,7 +32,6 @@ export default function Footer() {
 					</p>
 				</div>
 
-				{/* Open to Collaboration Section */}
 				<div className="footer-section">
 					<h4>Open to Collaboration</h4>
 					<a

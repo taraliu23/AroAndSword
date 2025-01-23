@@ -175,7 +175,6 @@ input {
   .bingo-cell {
     aspect-ratio: 1;
     font-size: 0.8rem;
-    /* Slightly smaller font for smaller screens */
   }
 }
 
@@ -186,7 +185,7 @@ input {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 0;
-  border: 2px solid var(--green-dark);
+  border: 2px solid var(--primary-color);
 }
 
 
@@ -196,7 +195,7 @@ input {
   justify-content: center;
   text-align: center;
   font-size: 0.9rem;
-  border: 1px solid var(--green-dark);
+  border: 1px solid var(--primary-color);
   color: var(--text-color);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
@@ -204,12 +203,14 @@ input {
 
 
 .bingo-cell.marked {
-  background: #38b2ac71;
+  /* background: #38b2ac71; */
+  background: #92f1b677;
   color: var(--text-color);
 }
 
 .bingo-cell:hover {
-  background-color: var(--peach);
+  /* background-color: #49e4dc3c; */
+  background-color: #ffbfa482;
   color: var(--text-color)
 }
 
@@ -519,7 +520,7 @@ a:hover::after {
 }
 
 .footer {
-  /* background-color: var(--ivory); */
+  background-color: var(--background);
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -688,12 +689,8 @@ a:hover::after {
 .navbar-container {
   top: 0;
   position: sticky;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   backdrop-filter: blur(8px);
   z-index: 1000;
-  /* margin-left: 4rem;
-  margin-right: 4rem; */
   border-radius: 8px;
   box-shadow: var(--foreground);
   width: 100%;
@@ -705,8 +702,7 @@ a:hover::after {
   color: var(--text-dark);
   text-decoration: none !important;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  margin-left: 2rem;
-
+  padding-left: 2rem;
 }
 
 .navbar-logo a {
@@ -724,8 +720,10 @@ a:hover::after {
   height: 64px;
   border-radius: 50%;
   /* margin: 2rem; */
-  margin-top: 2rem;
+  /* padding-top: 2rem; */
   margin-left: 2rem;
+  margin-top: 2rem;
+
 }
 
 .navbar-links {
@@ -734,9 +732,11 @@ a:hover::after {
   justify-content: center;
   align-items: center;
   gap: 4rem;
+  margin-bottom: 0rem;
 }
 
 .navbar-links a {
+
   text-decoration: none;
   font-size: 1.2rem;
   /* color: var(--foreground); */
@@ -1281,6 +1281,6 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .bingo-page {
-
+  background: var(--background);
   padding: 16px;
 }

@@ -8,7 +8,7 @@ import Resources from "../components/Resources";
 
 export default function ResourcesPage() {
 	return (
-		<div>
+		<div className="app">
 			<Navbar /> {/* Add a Navbar for navigation */}
 			<main className="bingo-page">
 				{/* <h1 className="page-title">Aromantic Bingo</h1>
