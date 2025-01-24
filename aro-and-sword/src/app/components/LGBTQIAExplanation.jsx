@@ -76,7 +76,9 @@ const LGBTQIAExplanation = () => {
 	return (
 		<div className="lgbtqia-wrapper">
 			<h2 className="info-title">What Does LGBTQIA+ Stand For?</h2>
-
+			<div className="sub-title">
+				Click on a letter to learn more about the identity it represents!
+			</div>
 			<div className="letters-grid">
 				{letters.map((letter) => (
 					<div
@@ -88,6 +90,7 @@ const LGBTQIAExplanation = () => {
 					</div>
 				))}
 			</div>
+
 
 			<div className="letter-details-fixed">
 				<h5 className="letter-details">{selectedLetter.name}</h5>

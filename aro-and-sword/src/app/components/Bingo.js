@@ -77,22 +77,19 @@ export default function Bingo() {
 	const saveAsPicture = () => {
 		const bingoGrid = document.querySelector(".bingo-container");
 
-		// Create a container for the title and watermark
 		const wrapper = document.createElement("div");
 		wrapper.className = "watermark-container";
 		document.body.appendChild(wrapper);
 
-		// Clone the Bingo grid and append it to the wrapper
 		const clonedBingoGrid = bingoGrid.cloneNode(true);
 		wrapper.appendChild(clonedBingoGrid);
 
-		// Add the title
+
 		const title = document.createElement("div");
 		title.className = "watermark-title";
 		title.textContent = currentBingo;
 		wrapper.insertBefore(title, clonedBingoGrid);
 
-		// Add the logo
 		const logo = document.createElement("img");
 		logo.className = "watermark-logo";
 		logo.src = "/images/logo.png";
@@ -117,7 +114,6 @@ export default function Bingo() {
 		});
 	};
 
-	// Options for React Select
 	const options = Object.keys(bingoLists).map((key) => ({
 		value: key,
 		label: key,
@@ -130,7 +126,6 @@ export default function Bingo() {
 				Click on the squares that resonate with you. Can you get a Bingo?
 			</p>
 
-			{/* React Select Dropdown */}
 			<Select className="bingo-select"
 				options={options}
 				defaultValue={options[0]} // Set default value
