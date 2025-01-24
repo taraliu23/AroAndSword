@@ -19,7 +19,7 @@ const Navbar = () => {
 				{/* <li><a href="#what-is-aromanticism">What is Aromanticism</a></li> */}
 				{/* <li><a href="#split-attraction-model">SAM</a></li> */}
 				<li><a href="/resources">[Resources]</a></li>
-				<li><a href="#resources">[Get Involved]</a></li>
+				{/* <li><a href="#resources">[Get Involved]</a></li> */}
 			</ul>
 		</nav>
 	)

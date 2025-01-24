@@ -167,7 +167,7 @@ input {
 
 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bingo-grid {
     grid-template-columns: repeat(5, 1fr);
   }
@@ -176,7 +176,7 @@ input {
     aspect-ratio: 1;
     font-size: 0.8rem;
   }
-}
+} */
 
 .bingo-container {
   width: 60vw;
@@ -245,6 +245,46 @@ input {
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
   bottom: 0.5rem;
   /* top: 0.5rem; */
+}
+
+
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+  .bingo-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Reduce to 3 columns */
+    gap: 0.4rem;
+    /* Smaller gaps */
+  }
+
+  .bingo-cell {
+    font-size: 0.85rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .button {
+    font-size: 0.85rem;
+    /* Smaller button text */
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .bingo-container {
+    grid-template-columns: repeat(2, 1fr);
+    /* Reduce to 2 columns on very small screens */
+  }
+
+  .bingo-cell {
+    font-size: 0.75rem;
+    /* Even smaller font size */
+  }
+
+  .button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
 }
 
 .line {
@@ -1148,23 +1188,18 @@ body.dark-mode .navbar-links a:hover {
   left: 5%;
 }
 
-/* Unique Style for Post-It 1 (note.png) */
 .post-it-wrapper.revealed.note-hero {
   width: 50vw;
   height: auto;
   transform: translate(10%, 10%);
 }
 
-/* Unique Style for Post-It 2 (note2.png) */
 .post-it-wrapper.revealed.note-footer {
-  /* transform: translate(50%, 50%); */
   width: 40vw;
   position: fixed;
   top: 0rem;
   bottom: 3 rem;
-  /* Example size for the footer post-it */
-  /* height: auto; */
-  /* Maintain aspect ratio */
+
 }
 
 .lgbtqia-wrapper {
