@@ -59,13 +59,13 @@ const LGBTQIAExplanation = () => {
 	});
 
 	const letters = [
-		{ id: "L", name: "👩🏽‍❤️‍💋‍👩🏽 Lesbian 👭", description: "A lesbian is a woman who is attracted to other women.", wiki: "https://en.wikipedia.org/wiki/Lesbian", img: "/images/L.png" },
-		{ id: "G", name: "👨‍❤️‍👨 Gay 👬", description: "Gay refers to a man who is attracted to other men.", wiki: "https://en.wikipedia.org/wiki/Gay", img: "/images/G.png" },
-		{ id: "B", name: "🟥🟪🟦 Bisexual", description: "Bisexual people are attracted to more than one gender.", wiki: "https://en.wikipedia.org/wiki/Bisexuality", img: "/images/B.png" },
-		{ id: "T", name: "⚧️ Transgender 🏳️‍⚧️", description: "Transgender people have a gender identity that differs from the sex they were assigned at birth.", wiki: "https://en.wikipedia.org/wiki/Transgender", img: "/images/T.png" },
-		{ id: "Q", name: "🟣⚪️ Queer 🟢", description: "Queer is an umbrella term for people who don’t identify as straight or cisgender.", wiki: "https://en.wikipedia.org/wiki/Queer", img: "/images/Q.png" },
-		{ id: "I", name: "💛 Intersex 💜💛", description: "Intersex people are born with physical traits that don’t fit typical definitions of male or female bodies.", wiki: "https://en.wikipedia.org/wiki/Intersex", img: "/images/I.png" },
-		{ id: "A", name: " Aromantic/ Asexual/⬛️⬜️🟩⬜️⬛️Agender", description: "Aromantic people experience little to no romantic attraction. 💚🤍🩶🖤 Asexual people experience little or no sexual attraction.🖤🩶🤍💜  Agender is a gender identity generally defined as in which one lacks a gender or has very little experience of a gender.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/A.png" },
+		{ id: "L", name: "👩🏽‍❤️‍💋‍👩🏽 Lesbian 👭", description: "Women attracted to other women.", wiki: "https://en.wikipedia.org/wiki/Lesbian", img: "/images/L.png" },
+		{ id: "G", name: "👨‍❤️‍👨 Gay 👬", description: "Men attracted to other men.", wiki: "https://en.wikipedia.org/wiki/Gay", img: "/images/G.png" },
+		{ id: "B", name: "🟥 🟪 🟦 Bisexual", description: "People who are attracted to more than one gender.", wiki: "https://en.wikipedia.org/wiki/Bisexuality", img: "/images/B.png" },
+		{ id: "T", name: "⚧️ Transgender 🏳️‍⚧️", description: "People with gender identity that differs from the sex they were assigned at birth.", wiki: "https://en.wikipedia.org/wiki/Transgender", img: "/images/T.png" },
+		{ id: "Q", name: "🟣 ⚪️ Queer 🟢", description: "⛱️ Umbrella term for people who don’t identify as straight or cisgender.", wiki: "https://en.wikipedia.org/wiki/Queer", img: "/images/Q.png" },
+		{ id: "I", name: "💛 Intersex 💜 💛", description: "People who are born with physical traits that don’t fit typical definitions of male or female bodies.", wiki: "https://en.wikipedia.org/wiki/Intersex", img: "/images/I.png" },
+		{ id: "A", name: "🙅🏻‍♀️ 🏹 Aromantic / Asexual / Agender ⬛️ 🍰", description: "💚 Aromantic people experience little to no romantic attraction. 💜 Asexual people experience little or no sexual attraction. 🤍 Agender is a gender identity generally defined as in which one lacks a gender or has very little experience of a gender.", wiki: "https://en.wikipedia.org/wiki/Asexuality", img: "/images/A.png" },
 		{ id: "+", name: "Plus 🧡💛💚💙💜🤎🖤", description: "Other identities not included in LGBTQIA.", wiki: "https://en.wikipedia.org/wiki/LGBT", img: "/images/plus.png" },
 	];
 

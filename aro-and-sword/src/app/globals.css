@@ -203,14 +203,15 @@ input {
 
 
 .bingo-cell.marked {
-  /* background: #38b2ac71; */
-  background: #92f1b677;
+  background: #38b2ac71;
+  /* background: #92f1b69b; */
   color: var(--text-color);
 }
 
 .bingo-cell:hover {
   /* background-color: #49e4dc3c; */
   background-color: #ffbfa482;
+  /* background-color: #92f1b66d; */
   color: var(--text-color)
 }
 
@@ -408,8 +409,8 @@ input {
 
 .learn-more-button:hover {
   transform: scale(1.05);
-  color: var(--text-background);
-
+  color: var(--primary-color);
+  font-family: sohne-mono, monospace;
 }
 
 .reverse-layout {
@@ -1174,15 +1175,16 @@ body.dark-mode .navbar-links a:hover {
 
 .letters-grid {
   margin: 4rem;
-  margin-top: 6rem;
+  margin-bottom: 0rem;
+  /* margin-top: 6rem; */
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   /* 4 letters per row */
   gap: 0rem;
   /* justify-items: center; */
-  padding-left: 4rem;
-  padding-right: 3rem;
-
+  /* padding-left: 4rem;
+  padding-right: 3rem; */
+  padding: 3rem;
 }
 
 
@@ -1195,15 +1197,13 @@ body.dark-mode .navbar-links a:hover {
 
 
 .letter-container {
-
   position: relative;
-  height: 200px;
+  height: 100px;
   cursor: pointer;
   transform-origin: center center;
   transition: transform 0.4s ease;
 }
 
-/* Transform Each Letter for Misalignment */
 .letter-container:nth-child(1) {
   transform: scale(1.42) rotate(-5deg) translate(20%, -5%) translateX(-15%);
   z-index: 2;
@@ -1247,16 +1247,14 @@ body.dark-mode .navbar-links a:hover {
 
 /* Letter Image */
 .letter-image {
-  width: 100%;
-
+  width: 80%;
   height: auto;
   transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
 
 }
 
 .letter-container:hover .letter-image {
-  transform: translate3d(0px, -10%, 30px) rotateX(-10deg) rotateY(10deg);
-
+  transform: translate3d(2px, -30%, 40px) rotateX(-12deg) rotateY(10deg);
   opacity: 0.9;
 }
 
