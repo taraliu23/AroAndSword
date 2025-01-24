@@ -1247,7 +1247,7 @@ body.dark-mode .navbar-links a:hover {
 
 /* Letter Image */
 .letter-image {
-  width: 80%;
+  width: 60%;
   height: auto;
   transition: transform 0.4s ease, opacity 0.4s ease, box-shadow 0.4s ease;
 
