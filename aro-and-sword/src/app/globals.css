@@ -1349,3 +1349,15 @@ body.dark-mode .navbar-links a:hover {
   background: var(--background);
   padding: 16px;
 }
+
+/* add an effect: get large when hover, get centered when click */
+
+.picture-animation-hover:hover {
+  transform: scale(1.2);
+  transform: matrix3d(1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1.1, 0, 0, 0, 0, 1);
+
+}
+
+.picture-animation-click:active {
+  transform: scale(2);
+}

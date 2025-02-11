@@ -30,7 +30,7 @@ export default function SplitAttractionModel() {
 						/>
 					</a>
 				</div>
-				<div className="image-container">
+				<div className="image-container picture-animation-hover picture-animation-click">
 					<img
 						src="/images/sam-model2.png"
 						alt="Split Attraction Model"
