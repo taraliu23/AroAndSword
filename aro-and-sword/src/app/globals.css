@@ -1329,7 +1329,6 @@ body.dark-mode .navbar-links a:hover {
   font-size: 0.95rem;
   margin: 0.5rem 0;
   color: var(--text-color);
-  font-family: Helvetica, sans-serif;
 }
 
 /* Fade-in Animation */
@@ -1366,16 +1365,15 @@ body.dark-mode .navbar-links a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 2rem;
-  background-color: #fffaf7;
+  background-color: var(--background);
 }
 
 .manifesto-headline {
-  font-size: 3.5rem;
   font-weight: 700;
   text-align: center;
-  line-height: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  font-family: "Barriecito";
 }
 
 .manifesto-subtext {
@@ -1397,37 +1395,113 @@ body.dark-mode .navbar-links a:hover {
   line-height: 1.6;
 }
 
-.manifesto-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.manifesto-image-wrapper {
+.manifesto-gallery-collage {
   position: relative;
-  cursor: grab;
-  user-select: none;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 60vw;
+  max-width: 100rem;
+  height: 80vh;
+  padding: 2rem;
+  overflow: hidden;
 }
 
-.manifesto-image-wrapper:active {
+/* Image variations */
+.collage-image-wrapper {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+  transition: transform 0.3s ease;
+  user-select: none;
+
+  /* Positioning with CSS variables */
+  top: var(--top, 0%);
+  left: var(--left, 0%);
+  transform: rotate(var(--rotate, 0deg));
+  z-index: var(--z-index, 1);
+}
+
+/* Randomized size variations */
+.collage-image-wrapper.small {
+  width: 150px;
+  height: 150px;
+}
+
+.collage-image-wrapper.medium {
+  width: 200px;
+  height: 200px;
+}
+
+.collage-image-wrapper.large {
+  width: 250px;
+  height: 250px;
+}
+
+.collage-image-wrapper:active {
   cursor: grabbing;
 }
 
-.manifesto-image-ratio-box {
-  position: relative;
+/* Image inside */
+.collage-image {
+  object-fit: cover;
   width: 100%;
-  padding-bottom: 130%;
-  /* 4:5 ratio */
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border-radius: 12px;
+  pointer-events: none;
 }
 
-.manifesto-image {
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-content {
+  position: relative;
+  width: 90vw;
+  max-width: 800px;
+  height: 80vh;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.lightbox-image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive fallback */
+@media screen and (max-width: 768px) {
+  .manifesto-gallery-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    position: static;
+  }
+
+  .collage-image-wrapper {
+    position: static;
+    width: 100%;
+    height: auto;
+    transform: none !important;
+    cursor: pointer;
+  }
+
+  .collage-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 }

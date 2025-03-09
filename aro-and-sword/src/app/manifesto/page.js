@@ -2,7 +2,7 @@
 'use client';
 
 import React from "react";
-import Navbar from '../components/Navbar'; // Import your Navbar component
+import Navbar from '../components/Navbar';
 import ManifestoSection from '../components/ManifestoSection'
 
 export default function ManifestoPage() {
