@@ -1361,3 +1361,73 @@ body.dark-mode .navbar-links a:hover {
 .picture-animation-click:active {
   transform: scale(2);
 }
+
+.manifesto-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6rem 2rem;
+  background-color: #fffaf7;
+}
+
+.manifesto-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.manifesto-subtext {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+.manifesto-paragraph {
+  font-size: 1.125rem;
+  text-align: center;
+  max-width: 720px;
+  color: #555;
+  margin-bottom: 4rem;
+  line-height: 1.6;
+}
+
+.manifesto-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.manifesto-image-wrapper {
+  position: relative;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.3s ease;
+}
+
+.manifesto-image-wrapper:active {
+  cursor: grabbing;
+}
+
+.manifesto-image-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 130%;
+  /* 4:5 ratio */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.manifesto-image {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
