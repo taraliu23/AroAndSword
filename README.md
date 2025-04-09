@@ -54,7 +54,15 @@ As the sole developer, I built an interactive platform featuring educational res
 
 ## Features
 
-<code>❯ REPLACE-ME</code>
+- Interactive Education widget on LGBTQIA+
+
+- 2 Bingo games! (You can share results with friends)
+
+- Stress-relieving meditation page with floating cards
+
+- *Most helpful* Resource list  for the aromantic
+
+
 
 ---
 
