@@ -46,7 +46,9 @@
 
 ## Overview
 
+I developed [aro-n-sword.com](http://aro-n-sword.com/), an open-sourced, full-stack web application focused on increasing visibility and understanding of aromanticism in the LGBTQIA+ community. The project arose from identifying a critical need: aromantic individuals, who make up just 0.4% of the population, lacked engaging online resources and often face AI-driven discrimination in content moderation. 
 
+As the sole developer, I built an interactive platform featuring educational resources and community-building elements like a Bingo game. This first-of-its-kind website has created an accessible space for learning about aromantic experiences while fostering community engagement through its dynamic content.
 
 ---
 
