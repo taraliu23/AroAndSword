@@ -28,7 +28,7 @@ const variants = {
 	})
 }
 
-const sizes = ['small', 'medium', 'large'] // Random sizes for variety
+const sizes = ['medium', 'large'] // Random sizes for variety
 
 export default function ManifestoSection() {
 	const [layout, setLayout] = useState([])
@@ -36,7 +36,9 @@ export default function ManifestoSection() {
 	const galleryRef = useRef(null)
 
 	useEffect(() => {
-		if (!galleryRef.current) return
+		if (!galleryRef.current) {
+			return
+		}
 
 		const containerWidth = galleryRef.current.offsetWidth
 		const containerHeight = galleryRef.current.offsetHeight
@@ -97,7 +99,7 @@ export default function ManifestoSection() {
 						dragConstraints={galleryRef}
 						dragElastic={0.2}
 						whileTap={{ scale: 0.96 }}
-						animate={{ x: 0, y: 0 }} // Snap-back effect
+						animate={{ x: 0 }} // Snap-back effect
 						onClick={() => setLightboxImage(src)}
 						style={{
 							'--top': layout[index]?.top,

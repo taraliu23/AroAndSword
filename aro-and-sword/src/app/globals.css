@@ -1403,7 +1403,7 @@ body.dark-mode .navbar-links a:hover {
   width: 60vw;
   max-width: 100rem;
   height: 80vh;
-  padding: 2rem;
+  margin: 2rem;
   overflow: hidden;
 }
 
@@ -1412,7 +1412,7 @@ body.dark-mode .navbar-links a:hover {
   position: absolute;
   overflow: hidden;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
   cursor: grab;
   transition: transform 0.3s ease;
   user-select: none;

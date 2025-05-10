@@ -60,7 +60,7 @@ As the sole developer, I built an interactive platform featuring educational res
 
 - Stress-relieving meditation page with floating cards
 
-- *Most helpful* Resource list  for the aromantic
+- *Most helpful* Resource list for the aromantic
 
 
 
