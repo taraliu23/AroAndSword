@@ -403,9 +403,10 @@ npm test
 
 ## Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [X] **`Task 1`**: <strike>Random card manifesto.</strike>
+- [ ] **`Task 2`**: Cat game
+- [ ] **`Task 3`**: Meme Archives
+
 
 ---
 
@@ -454,7 +455,7 @@ npm test
 
 ## License
 
-Aroandsword is protected under the [LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+Aroandsword is protected under the [MIT LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
 
 ---
 
