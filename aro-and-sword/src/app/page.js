@@ -53,7 +53,7 @@ export default function HomePage() {
 
 			{/* <TypewriterHero /> */}
 			<LGBTQIAExplanation />
-			<Bingo />
+			{/* <Bingo /> */}
 
 			<PostItCard positionClass="top-left" imgSrc="/images/note2.png" visibilityHandler={isInHeroSection} uniqueClass="note-hero" />
 

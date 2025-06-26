@@ -62,6 +62,39 @@ header {
   background-color: var(--text-background);
 }
 
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    display: none;
+    margin-top: 1rem;
+    background: var(--text-background);
+    position: flex;
+    box-shadow: var(--foreground);
+    border-radius: 0 0 8px 8px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
 /* Forms */
 input {
   @apply border rounded-md p-2 w-full mb-4;
@@ -348,14 +381,6 @@ input {
   text-align: center;
   width: 60vw;
   margin: 0 auto;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
 }
 
 /* For debugging! */
@@ -871,6 +896,60 @@ body.dark-mode .navbar-links a:hover {
   padding-top: 4rem;
   padding-left: 1rem;
   padding-right: 1 rem;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .hero-main-image {
+    max-width: 80vw;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .sub-title {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content {
+    padding: 1rem 0.2rem;
+    gap: 1rem;
+  }
+
+  .hero-main-image {
+    max-width: 98vw;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-left: 0;
+  }
+
+  .sub-title {
+    font-size: 0.95rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }
 
 @keyframes fade-in {
