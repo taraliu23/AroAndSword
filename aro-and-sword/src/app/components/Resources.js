@@ -1,9 +1,7 @@
 
 'use client';
 import React from "react";
-import { linkPreview } from "tb-link-preview";
 
-linkPreview();
 
 export default function Resources() {
 	return (
