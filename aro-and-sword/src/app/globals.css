@@ -37,10 +37,8 @@
 }
 
 * {
-  /* margin: 0; */
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 body {
@@ -83,7 +81,6 @@ input {
 }
 
 
-/* Animations (Optional AOS Integration) */
 [data-aos] {
   opacity: 0;
   transition: opacity 0.6s ease, transform 0.6s ease;
@@ -412,11 +409,8 @@ input {
 }
 
 .info-title {
-  /* font-size: 1.8rem; */
   font-size: xX-large;
-  /* font-weight: bold; */
   margin-bottom: 1rem;
-  /* color: var(--primary-color); */
   color: var(--text-color);
   font-family: "Barriecito";
 
@@ -459,7 +453,6 @@ input {
 
 .small-images-grid {
   margin: 2rem 0;
-  /* Add spacing around the grid */
   justify-content: center;
 }
 
@@ -613,14 +606,6 @@ a:hover::after {
 
 }
 
-/* Footer */
-/* .footer {
-  background-color: var(--ivory) !important;
-  color: var(--foreground);
-  padding: 2rem 1rem;
-
-} */
-
 .footer-container {
   display: flex;
   justify-content: space-around;
@@ -697,17 +682,6 @@ a:hover::after {
 
 }
 
-/* .header_header__head__links__EdHcy .header_nav-button__Eqd1T {
-  flex-grow: 1;
-  display: block;
-  text-align: center;
-  transition: color .6s var(--ease-out-expo), background-color .6s var(--ease-out-expo);
-  padding: 1.1111111111vw 1.6666666667vw;
-  position: relative;
-} */
-
-
-
 
 .img-container {
   perspective: 1000px;
@@ -751,17 +725,12 @@ a:hover::after {
   text-decoration: none !important;
   justify-content: center;
   flex-shrink: 0;
-  /* margin-left: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 0rem; */
 }
 
 .logo-image {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  /* margin: 2rem; */
-  /* padding-top: 2rem; */
   margin-left: 2rem;
   margin-top: 2rem;
 
@@ -880,11 +849,8 @@ body.dark-mode .navbar-links a:hover {
 /* Hero Section */
 .hero-section {
   position: flex;
-  /* display: contents; */
   align-items: center;
-  /* justify-content: center; */
   min-height: 60vh;
-  /* padding: 2rem; */
   background:
     url('/images/background3.png') no-repeat;
   background-size: 60%;
@@ -892,12 +858,8 @@ body.dark-mode .navbar-links a:hover {
   background-color: var(--background);
   overflow: hidden;
   animation: fade-in 2s ease-in-out;
-  /* Apply the fade-in animation */
   opacity: 0;
-  /* Start fully transparent */
   animation-fill-mode: forwards;
-  /* Ensure the animation persists after completion */
-  /* padding-left: 0%; */
 }
 
 .hero-content {
@@ -914,16 +876,12 @@ body.dark-mode .navbar-links a:hover {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    /* Fully transparent at the start */
     filter: blur(10px);
-    /* Add blur for a subtle effect */
   }
 
   100% {
     opacity: 1;
-    /* Fully visible */
     filter: blur(0);
-    /* Clear the blur */
   }
 }
 
@@ -939,10 +897,7 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .hero-title {
-  /* font-size: 2.5rem; */
-  /* font-size: xx-large; */
   font-size: 4rem;
-  /* font-family: "Playfair Display", serif; */
   font-family: "Barriecito";
   color: #333;
   text-align: center;
@@ -951,7 +906,6 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .hero-title-large {
-  /* font-size: 3.5rem; */
   font-size: 5rem;
   font-family: "Playfair Display", serif;
   font-weight: bold;
@@ -985,19 +939,16 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .decorative-line {
-  /* position: absolute; */
   position: relative;
   display: flex;
   width: 100px;
   height: 2px;
   background: var(--secondary-color);
-  /* top: 0.1rem; */
   right: 22rem;
   bottom: 1rem;
 }
 
 .decorative-circle {
-  /* position: absolute; */
   position: relative;
   width: 40px;
   height: 40px;
@@ -1151,15 +1102,11 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .post-it-wrapper:hover {
-  /* width: 200px;
-  height: 200px; */
-  /* clip-path: polygon(100% 0, 100% 100%, 0 100%); */
   filter: blur(2px);
   opacity: 1;
 }
 
 .post-it-wrapper.revealed {
-  /* position: absolute; */
   position: fixed;
   clip-path: none;
   z-index: 2000;
@@ -1177,8 +1124,7 @@ body.dark-mode .navbar-links a:hover {
 }
 
 .post-it-wrapper.bottom-right {
-  /* bottom: 10%;
-  left: 5%; */
+
   top: 60%;
   right: 1%;
 }
@@ -1230,7 +1176,6 @@ body.dark-mode .navbar-links a:hover {
 
 .letter-container {
   position: relative;
-  /* height: 100px; */
   width: 80px;
   cursor: pointer;
   transform-origin: center center;
@@ -1416,8 +1361,6 @@ body.dark-mode .navbar-links a:hover {
   cursor: grab;
   transition: transform 0.3s ease;
   user-select: none;
-
-  /* Positioning with CSS variables */
   top: var(--top, 0%);
   left: var(--left, 0%);
   transform: rotate(var(--rotate, 0deg));
