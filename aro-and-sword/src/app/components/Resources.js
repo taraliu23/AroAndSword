@@ -60,7 +60,7 @@ export default function Resources() {
 							</li>
 						</ul>
 
-						<h6 className="sub-title-inline small-head">📓 Books 📗</h6>
+						<h6 className="sub-title-inline small-head">📓 Books & Education📗</h6>
 						<ul>
 							<li>
 								<a className="link-inline"
@@ -87,6 +87,34 @@ export default function Resources() {
 									rel="noopener noreferrer"
 								>
 									The Ace And Aro Relationship Guide: Making It Work In Friendships, Love And Sex
+
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.goodreads.com/book/show/51563160-common-bonds"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									Common Bonds: an Aromantic Speculative Anthology
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.aroacedatabase.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									AroAce Database - AroAce Characters in Media
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://aro-ace.carrd.co/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									AroAce Cards
 								</a>
 							</li>
 						</ul>
@@ -117,7 +145,43 @@ export default function Resources() {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									Subreddit r/aromantic
+									r/aromantic
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.reddit.com/r/aaaaaaaarrrrro/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									r/aaaaaaaarrrrro
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.reddit.com/r/AroAceMemes/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									r/AroAceMemes
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.reddit.com/r/aromanticasexual/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									r/aromanticasexual
+								</a>
+							</li>
+							<li>
+								<a className="link-inline"
+									href="https://www.reddit.com/r/AskAromantics/"
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									r/AskAromantics
 								</a>
 							</li>
 						</ul>

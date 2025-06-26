@@ -883,7 +883,7 @@ body.dark-mode .navbar-links a:hover {
   /* display: contents; */
   align-items: center;
   /* justify-content: center; */
-  min-height: 100vh;
+  min-height: 60vh;
   /* padding: 2rem; */
   background:
     url('/images/background3.png') no-repeat;
