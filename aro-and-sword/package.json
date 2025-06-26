@@ -22,7 +22,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-select": "^5.9.0",
-    "retro.css": "^1.0.0"
+    "retro.css": "^1.0.0",
+    "tb-link-preview": "^1.0.3"
   },
   "devDependencies": {
     "@appnest/readme": "^1.2.7",

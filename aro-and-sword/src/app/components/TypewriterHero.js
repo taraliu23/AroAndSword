@@ -58,7 +58,7 @@ export default function TypewriterHero() {
 		<div className="hero-typewriter">
 			<TypewriteEffect
 				staticText="Hello, my"
-				dynamicWords={["aro", "aroace", "ace", "queer", "stranger on the internet"]}
+				dynamicWords={["Aro", "AroAce", "Ace", "Queer", "Stranger on the Internet"]}
 			/>
 		</div>
 	);

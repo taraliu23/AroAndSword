@@ -1,6 +1,9 @@
 
 'use client';
 import React from "react";
+import { linkPreview } from "tb-link-preview";
+
+linkPreview();
 
 export default function Resources() {
 	return (
@@ -60,7 +63,7 @@ export default function Resources() {
 							</li>
 						</ul>
 
-						<h6 className="sub-title-inline small-head">📓 Books & Education📗</h6>
+						<h6 className="sub-title-inline">📓 Books & Education 📗</h6>
 						<ul>
 							<li>
 								<a className="link-inline"
